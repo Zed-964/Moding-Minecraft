@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "testmod:block/asteroid_coal_ore"
+    }
+  }
+}
