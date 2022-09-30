@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zed964.testmod.block.ModBlocks;
+import net.zed964.testmod.block.entity.ModBlockEntities;
 import net.zed964.testmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -33,8 +34,11 @@ public class TestMod
     {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModBlockEntities.register(eventBus);
+
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
