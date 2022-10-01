@@ -1,0 +1,21 @@
+{
+  "item.testmod.asteroid_piece": "Asteroid Piece",
+  "item.testmod.raw_uranium": "Raw Uranium",
+  "item.testmod.uranium_ingot": "Uranium Ingot",
+
+  "block.testmod.asteroid_block": "Asteroid Block",
+  "block.testmod.asteroid_coal_ore": "Asteroid Coal Ore",
+  "block.testmod.asteroid_iron_ore": "Asteroid Iron Ore",
+  "block.testmod.asteroid_copper_ore": "Asteroid Copper Ore",
+  "block.testmod.asteroid_gold_ore": "Asteroid Gold Ore",
+  "block.testmod.asteroid_redstone_ore": "Asteroid Redstone Ore",
+  "block.testmod.asteroid_emerald_ore": "Asteroid Emerald Ore",
+  "block.testmod.asteroid_lapis_lazuli_ore": "Asteroid Lapis Lazuli Ore",
+  "block.testmod.asteroid_diamond_ore": "Asteroid Diamond Ore",
+  "block.testmod.asteroid_quartz_ore": "Asteroid Quartz Ore",
+  "block.testmod.asteroid_uranium_ore": "Asteroid Uranium Ore",
+  "block.testmod.uranium_ore": "Uranium Ore",
+  "block.testmod.deepslate_uranium_ore": "Deepslate Uranium Ore",
+
+  "itemGroup.testmod_tab": "Test Mod"
+}
