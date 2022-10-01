@@ -14,8 +14,13 @@
   "block.testmod.asteroid_diamond_ore": "Asteroid Diamond Ore",
   "block.testmod.asteroid_quartz_ore": "Asteroid Quartz Ore",
   "block.testmod.asteroid_uranium_ore": "Asteroid Uranium Ore",
+  "block.testmod.asteroid_platinium_ore": "Asteroid Platinium Ore",
+
   "block.testmod.uranium_ore": "Uranium Ore",
+  "block.testmod.platinium_ore": "Platinium Ore",
+
   "block.testmod.deepslate_uranium_ore": "Deepslate Uranium Ore",
+  "block.testmod.deepslate_platinium_ore": "Deepslate Platinium Ore",
 
   "itemGroup.testmod_tab": "Test Mod"
 }

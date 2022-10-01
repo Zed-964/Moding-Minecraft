@@ -27,24 +27,43 @@ import org.jetbrains.annotations.Nullable;
 public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
     public static final EnumProperty<VerticalSlabType> TYPE = ModBlockStateProperties.VERTICAL_SLAB_TYPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    private static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    protected static final VoxelShape RIGHT_AABB = Block.box(8.0D, 0.0D, 0.0D, 16.0D, 0.0D, 0.0D);
-    protected static final VoxelShape LEFT_AABB = Block.box(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+
+    protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 8.0D, 16.0D, 16.0D, 0.0D);
+    protected static final VoxelShape EAST_AABB = Block.box(8.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape WEST_AABB = Block.box(8.0D, 0.0D, 16.0D, 0.0D, 16.0D, 0.0D);
+    protected static final VoxelShape SOUTH_AABB = Block.box(16.0D, 0.0D, 8.0D, 0.0D, 16.0D, 16.0D);
+
 
     public VerticalSlabBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalSlabType.RIGHT).setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalSlabType.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
-    @Nullable
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().supportsExternalFaceHiding();
+    public boolean useShapeForLightOcclusion(BlockState pState) {
+        return pState.getValue(TYPE) != VerticalSlabType.DOUBLE;
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(TYPE, WATERLOGGED, FACING);
+        pBuilder.add(TYPE, WATERLOGGED);
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        VerticalSlabType verticalSlabType = pState.getValue(TYPE);
+        switch(verticalSlabType) {
+            case DOUBLE:
+                return Shapes.block();
+            case NORTH:
+                return NORTH_AABB;
+            case EAST:
+                return EAST_AABB;
+            case WEST:
+                return WEST_AABB;
+            case SOUTH:
+                return SOUTH_AABB;
+        }
     }
 
 

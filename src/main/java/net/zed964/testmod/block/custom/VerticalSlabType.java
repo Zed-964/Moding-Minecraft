@@ -4,8 +4,10 @@ import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
 
 public enum VerticalSlabType implements StringRepresentable {
-    RIGHT("right"),
-    LEFT("left"),
+    NORTH("north"),
+    EAST("east"),
+    WEST("west"),
+    SOUTH("south"),
     DOUBLE("double");
 
     private final String name;
