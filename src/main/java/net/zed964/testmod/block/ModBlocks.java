@@ -4,7 +4,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.MossBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -41,8 +40,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ASTEROID_STAIRS = registerBlock("asteroid_stairs", () -> new StairBlock(() -> ModBlocks.ASTEROID_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);
     public static final RegistryObject<Block> ASTEROID_SLAB = registerBlock("asteroid_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);
-    public static final RegistryObject<Block> ASTEROID_VERTICAL_SLAB = registerBlock("asteroid_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);
 
+    public static final RegistryObject<Block> ASTEROID_VERTICAL_SLAB = registerBlock("asteroid_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
 
     public static final RegistryObject<Block> CONTROLLEUR_BLOCK = registerBlock("controlleur_block", () -> new ControlleurBlock(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);
     public static final RegistryObject<Block> INPUT_ITEM = registerBlock("input_item", () -> new ControlleurBlock(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);
