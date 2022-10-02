@@ -55,14 +55,14 @@ public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
         switch(verticalSlabType) {
             case DOUBLE:
                 return Shapes.block();
-            case NORTH:
-                return NORTH_AABB;
             case EAST:
                 return EAST_AABB;
             case WEST:
                 return WEST_AABB;
             case SOUTH:
                 return SOUTH_AABB;
+            default:
+                return NORTH_AABB;
         }
     }
 
