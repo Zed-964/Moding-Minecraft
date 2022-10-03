@@ -1,4 +1,4 @@
-package net.zed964.testmod.block.custom;
+package net.zed964.testmod.block.custom.building;
 
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
@@ -7,8 +7,7 @@ public enum VerticalSlabType implements StringRepresentable {
     NORTH("north"),
     EAST("east"),
     WEST("west"),
-    SOUTH("south"),
-    DOUBLE("double");
+    SOUTH("south");
 
     private final String name;
 

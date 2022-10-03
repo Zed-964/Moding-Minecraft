@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testmod:block/asteroid_slab"
+    },
+    "type=double": {
+      "model": "testmod:block/asteroid_slab"
+    },
+    "type=top": {
+      "model": "testmod:block/asteroid_slab_top"
+    }
+  }
+}

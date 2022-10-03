@@ -22,5 +22,11 @@
   "block.testmod.deepslate_uranium_ore": "Deepslate Uranium Ore",
   "block.testmod.deepslate_platinium_ore": "Deepslate Platinium Ore",
 
+  "block.testmod.asteroid_slab": "Asteroid Slab",
+
+  "block.testmod.asteroid_stairs": "Asteroid Stairs",
+
+  "block.testmod.asteroid_vertical_slab": "Asteroid Vertical Slab",
+
   "itemGroup.testmod_tab": "Test Mod"
 }
