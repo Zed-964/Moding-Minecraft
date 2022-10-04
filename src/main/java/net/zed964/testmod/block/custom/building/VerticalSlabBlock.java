@@ -17,7 +17,6 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.zed964.testmod.block.custom.ModBlockStateProperties;
-import net.zed964.testmod.block.custom.building.VerticalSlabType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -33,6 +32,11 @@ public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
     public VerticalSlabBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalSlabType.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+    }
+
+    @Override
+    public boolean useShapeForLightOcclusion(@NotNull BlockState pState) {
+        return true;
     }
 
     @Override
@@ -56,14 +60,20 @@ public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         BlockPos blockPos = pContext.getClickedPos();
         FluidState fluidState = pContext.getLevel().getFluidState(blockPos);
-        BlockState blockState1 = this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
+        BlockState blockState = this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
         Direction directionPlacement = pContext.getHorizontalDirection();
 
         return switch (directionPlacement) {
-            case EAST -> blockState1.setValue(TYPE, VerticalSlabType.EAST);
-            case WEST -> blockState1.setValue(TYPE, VerticalSlabType.WEST);
-            case SOUTH -> blockState1.setValue(TYPE, VerticalSlabType.SOUTH);
-            default -> blockState1.setValue(TYPE, VerticalSlabType.NORTH);
+            case EAST -> blockState.setValue(TYPE, VerticalSlabType.EAST);
+            case WEST -> blockState.setValue(TYPE, VerticalSlabType.WEST);
+            case SOUTH -> blockState.setValue(TYPE, VerticalSlabType.SOUTH);
+            default -> blockState.setValue(TYPE, VerticalSlabType.NORTH);
         };
     }
+
+    @Override
+    public @NotNull FluidState getFluidState(BlockState pState) {
+        return pState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(pState);
+    }
+
 }

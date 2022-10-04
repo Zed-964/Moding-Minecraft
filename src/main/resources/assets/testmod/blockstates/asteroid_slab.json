@@ -4,7 +4,7 @@
       "model": "testmod:block/asteroid_slab"
     },
     "type=double": {
-      "model": "testmod:block/asteroid_slab"
+      "model": "testmod:block/asteroid_block"
     },
     "type=top": {
       "model": "testmod:block/asteroid_slab_top"

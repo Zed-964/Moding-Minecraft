@@ -14,19 +14,21 @@
   "block.testmod.asteroid_diamond_ore": "Asteroid Diamond Ore",
   "block.testmod.asteroid_quartz_ore": "Asteroid Quartz Ore",
   "block.testmod.asteroid_uranium_ore": "Asteroid Uranium Ore",
-  "block.testmod.asteroid_platinium_ore": "Asteroid Platinium Ore",
+  "block.testmod.asteroid_platinum_ore": "Asteroid Platinum Ore",
 
   "block.testmod.uranium_ore": "Uranium Ore",
-  "block.testmod.platinium_ore": "Platinium Ore",
+  "block.testmod.platinum_ore": "Platinum Ore",
 
   "block.testmod.deepslate_uranium_ore": "Deepslate Uranium Ore",
-  "block.testmod.deepslate_platinium_ore": "Deepslate Platinium Ore",
+  "block.testmod.deepslate_platinum_ore": "Deepslate Platinum Ore",
 
   "block.testmod.asteroid_slab": "Asteroid Slab",
 
   "block.testmod.asteroid_stairs": "Asteroid Stairs",
 
   "block.testmod.asteroid_vertical_slab": "Asteroid Vertical Slab",
+
+  "block.testmod.asteroid_half_slab": "Asteroid Half Slab",
 
   "itemGroup.testmod_tab": "Test Mod"
 }
