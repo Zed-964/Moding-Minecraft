@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zed964.testmod.TestMod;
 import net.zed964.testmod.block.custom.building.HalfSlabBlock;
+import net.zed964.testmod.block.custom.building.VerticalHalfSlabBlock;
 import net.zed964.testmod.block.custom.building.VerticalSlabBlock;
 import net.zed964.testmod.item.ModCreativeTab;
 import net.zed964.testmod.item.ModItems;
@@ -30,6 +31,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> ASTEROID_SLAB = registerBlock("asteroid_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);
     public static final RegistryObject<Block> ASTEROID_VERTICAL_SLAB = registerBlock("asteroid_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
     public static final RegistryObject<Block> ASTEROID_HALF_SLAB = registerBlock("asteroid_half_slab", () -> new HalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
+    public static final RegistryObject<Block> ASTEROID_VERTICAL_HALF_SLAB = registerBlock("asteroid_vertical_half_slab", () -> new VerticalHalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
+
 
     //Ressource from Minecraft ( in asteroid )
     public static final RegistryObject<Block> ASTEROID_COAL_ORE = registerBlock("asteroid_coal_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "type=north": {
+      "model": "testmod:block/asteroid_vertical_half_slab", "y": 0, "uvlock": true },
+    "type=east": {
+      "model": "testmod:block/asteroid_vertical_half_slab", "y": 90, "uvlock": true  },
+    "type=west": {
+      "model": "testmod:block/asteroid_vertical_half_slab", "y": 270, "uvlock": true  },
+    "type=south": {
+      "model": "testmod:block/asteroid_vertical_half_slab", "y": 180, "uvlock": true  }
+  }
+}
