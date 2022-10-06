@@ -1,12 +1,12 @@
 {
   "variants": {
-    "type=north": {
+    "facing=north": {
       "model": "testmod:block/asteroid_vertical_slab", "y": 180, "uvlock": true },
-    "type=east": {
+    "facing=east": {
       "model": "testmod:block/asteroid_vertical_slab", "y": 270, "uvlock": true  },
-    "type=west": {
+    "facing=west": {
       "model": "testmod:block/asteroid_vertical_slab", "y": 90, "uvlock": true  },
-    "type=south": {
+    "facing=south": {
       "model": "testmod:block/asteroid_vertical_slab", "y": 0, "uvlock": true  }
   }
 }

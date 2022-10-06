@@ -11,29 +11,30 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.zed964.testmod.block.custom.ModBlockStateProperties;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.zed964.testmod.block.custom.ModBlockStateProperties;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class HalfSlabBlock extends Block implements SimpleWaterloggedBlock {
+public class CornerBlock extends Block implements SimpleWaterloggedBlock {
     public static final EnumProperty<VerticalDirectionType> TYPE = ModBlockStateProperties.HALF_SLAB_TYPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected static final VoxelShape DOWN_NORTH_AABB = Block.box(0, 0, 0, 16, 8, 8);
-    protected static final VoxelShape DOWN_EAST_AABB = Block.box(8, 0, 0, 16, 8, 16);
+    protected static final VoxelShape DOWN_NORTH_AABB = Block.box(0, 0, 0, 8, 8, 8);
+    protected static final VoxelShape DOWN_EAST_AABB = Block.box(8, 0, 0, 16, 8, 8);
     protected static final VoxelShape DOWN_WEST_AABB = Block.box(0, 0, 0, 8, 8, 16);
-    protected static final VoxelShape DOWN_SOUTH_AABB = Block.box(0, 0, 8, 16, 8, 16);
-    protected static final VoxelShape UP_NORTH_AABB = Block.box(0, 8, 0, 16, 16, 8);
-    protected static final VoxelShape UP_EAST_AABB = Block.box(8, 8, 0, 16, 16, 16);
-    protected static final VoxelShape UP_WEST_AABB = Block.box(0, 8, 0, 8, 16, 16);
-    protected static final VoxelShape UP_SOUTH_AABB = Block.box(0, 8, 8, 16, 16, 16);
+    protected static final VoxelShape DOWN_SOUTH_AABB = Block.box(0, 0, 8, 8, 8, 16);
+    protected static final VoxelShape UP_NORTH_AABB = Block.box(0, 8, 0, 8, 16, 8);
+    protected static final VoxelShape UP_EAST_AABB = Block.box(8, 8, 0, 16, 16, 8);
+    protected static final VoxelShape UP_WEST_AABB = Block.box(0, 8, 0, 8, 16, 8);
+    protected static final VoxelShape UP_SOUTH_AABB = Block.box(0, 8, 8, 8, 16, 8);
 
-    public HalfSlabBlock(BlockBehaviour.Properties pProperties) {
+    public CornerBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalDirectionType.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
@@ -88,4 +89,3 @@ public class HalfSlabBlock extends Block implements SimpleWaterloggedBlock {
         return pState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(pState);
     }
 }
-

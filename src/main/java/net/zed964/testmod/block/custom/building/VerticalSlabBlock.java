@@ -11,17 +11,16 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.zed964.testmod.block.custom.ModBlockStateProperties;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
-    public static final EnumProperty<VerticalSlabType> TYPE = ModBlockStateProperties.VERTICAL_SLAB_TYPE;
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected static final VoxelShape NORTH_AABB = Block.box(0, 0, 0, 16, 16, 8);
@@ -31,7 +30,7 @@ public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
 
     public VerticalSlabBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalSlabType.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
@@ -41,13 +40,13 @@ public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(TYPE, WATERLOGGED);
+        pBuilder.add(FACING, WATERLOGGED);
     }
 
     @Override
     public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-        VerticalSlabType verticalSlabType = pState.getValue(TYPE);
-        return switch (verticalSlabType) {
+        Direction direction = pState.getValue(FACING);
+        return switch (direction) {
             case EAST -> EAST_AABB;
             case WEST -> WEST_AABB;
             case SOUTH -> SOUTH_AABB;
@@ -64,10 +63,10 @@ public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
         Direction directionPlacement = pContext.getHorizontalDirection();
 
         return switch (directionPlacement) {
-            case EAST -> blockState.setValue(TYPE, VerticalSlabType.EAST);
-            case WEST -> blockState.setValue(TYPE, VerticalSlabType.WEST);
-            case SOUTH -> blockState.setValue(TYPE, VerticalSlabType.SOUTH);
-            default -> blockState.setValue(TYPE, VerticalSlabType.NORTH);
+            case EAST -> blockState.setValue(FACING, Direction.EAST);
+            case WEST -> blockState.setValue(FACING, Direction.WEST);
+            case SOUTH -> blockState.setValue(FACING, Direction.SOUTH);
+            default -> blockState.setValue(FACING, Direction.NORTH);
         };
     }
 

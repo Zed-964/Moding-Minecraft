@@ -19,18 +19,23 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class VerticalHalfSlabBlock extends Block implements SimpleWaterloggedBlock {
+public class VerticalHollowCornerBlock extends Block implements SimpleWaterloggedBlock {
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected static final VoxelShape NORTH_AABB = Block.box(0, 0, 0, 8, 16, 8);
-    protected static final VoxelShape EAST_AABB = Block.box(8, 0, 0, 16, 16, 8);
-    protected static final VoxelShape WEST_AABB = Block.box(0, 0, 8, 8, 16, 16);
-    protected static final VoxelShape SOUTH_AABB = Block.box(8, 0, 8, 16, 16, 16);
+    protected static final VoxelShape NORTH_AABB = Block.box(0, 0, 0, 16, 16, 8);
+    protected static final VoxelShape EAST_AABB = Block.box(8, 0, 0, 16, 16, 16);
+    protected static final VoxelShape WEST_AABB = Block.box(0, 0, 0, 8, 16, 16);
+    protected static final VoxelShape SOUTH_AABB = Block.box(0, 0, 8, 16, 16, 16);
 
-    public VerticalHalfSlabBlock(BlockBehaviour.Properties pProperties) {
+    public VerticalHollowCornerBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+    }
+
+    @Override
+    public boolean useShapeForLightOcclusion(@NotNull BlockState pState) {
+        return true;
     }
 
     @Override
