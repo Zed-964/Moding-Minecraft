@@ -6,6 +6,5 @@ import net.zed964.testmod.block.custom.building.VerticalDirectionType;
 import net.zed964.testmod.block.custom.building.DirectionType;
 
 public class ModBlockStateProperties extends BlockStateProperties {
-    public static final EnumProperty<DirectionType> VERTICAL_SLAB_TYPE = EnumProperty.create("type", DirectionType.class);
     public static final EnumProperty<VerticalDirectionType> HALF_SLAB_TYPE = EnumProperty.create("type", VerticalDirectionType.class);
 }

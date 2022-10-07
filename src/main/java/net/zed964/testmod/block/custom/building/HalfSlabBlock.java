@@ -74,13 +74,24 @@ public class HalfSlabBlock extends Block implements SimpleWaterloggedBlock {
                 case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.UP_SOUTH);
                 default -> blockState.setValue(TYPE, VerticalDirectionType.UP_NORTH);
             };
+        } else {
+            double test = pContext.getClickLocation().y - blockPos.getY();
+            if (test < 0.5) {
+                return switch (directionPlacement) {
+                    case EAST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_EAST);
+                    case WEST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_WEST);
+                    case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_SOUTH);
+                    default -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_NORTH);
+                };
+            } else {
+                return switch (directionPlacement) {
+                    case EAST -> blockState.setValue(TYPE, VerticalDirectionType.UP_EAST);
+                    case WEST -> blockState.setValue(TYPE, VerticalDirectionType.UP_WEST);
+                    case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.UP_SOUTH);
+                    default -> blockState.setValue(TYPE, VerticalDirectionType.UP_NORTH);
+                };
+            }
         }
-        return switch (directionPlacement) {
-            case EAST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_EAST);
-            case WEST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_WEST);
-            case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_SOUTH);
-            default -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_NORTH);
-        };
     }
 
     @Override
