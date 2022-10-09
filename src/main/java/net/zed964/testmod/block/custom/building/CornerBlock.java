@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -22,32 +21,32 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class CornerBlock extends Block implements SimpleWaterloggedBlock {
-    public static final EnumProperty<VerticalDirectionType> TYPE = ModBlockStateProperties.HALF_SLAB_TYPE;
+    public static final EnumProperty<SpecifyDirectionType> SPECIFY_FACING = ModBlockStateProperties.SPECIFY_DIRECTION_TYPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected static final VoxelShape DOWN_NORTH_AABB = Block.box(0, 0, 0, 8, 8, 8);
     protected static final VoxelShape DOWN_EAST_AABB = Block.box(8, 0, 0, 16, 8, 8);
-    protected static final VoxelShape DOWN_WEST_AABB = Block.box(0, 0, 0, 8, 8, 16);
-    protected static final VoxelShape DOWN_SOUTH_AABB = Block.box(0, 0, 8, 8, 8, 16);
+    protected static final VoxelShape DOWN_WEST_AABB = Block.box(0, 0, 8, 8, 8, 16);
+    protected static final VoxelShape DOWN_SOUTH_AABB = Block.box(8, 0, 8, 16, 8, 16);
     protected static final VoxelShape UP_NORTH_AABB = Block.box(0, 8, 0, 8, 16, 8);
     protected static final VoxelShape UP_EAST_AABB = Block.box(8, 8, 0, 16, 16, 8);
-    protected static final VoxelShape UP_WEST_AABB = Block.box(0, 8, 0, 8, 16, 8);
-    protected static final VoxelShape UP_SOUTH_AABB = Block.box(0, 8, 8, 8, 16, 8);
+    protected static final VoxelShape UP_WEST_AABB = Block.box(0, 8, 8, 8, 16, 16);
+    protected static final VoxelShape UP_SOUTH_AABB = Block.box(8, 8, 8, 16, 16, 16);
 
     public CornerBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalDirectionType.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.defaultBlockState().setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(TYPE, WATERLOGGED);
+        pBuilder.add(SPECIFY_FACING, WATERLOGGED);
     }
 
     @Override
     public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-        VerticalDirectionType verticalDirectionType = pState.getValue(TYPE);
-        return switch (verticalDirectionType) {
+        SpecifyDirectionType specifyDirectionType = pState.getValue(SPECIFY_FACING);
+        return switch (specifyDirectionType) {
             case DOWN_EAST -> DOWN_EAST_AABB;
             case DOWN_WEST -> DOWN_WEST_AABB;
             case DOWN_SOUTH -> DOWN_SOUTH_AABB;
@@ -70,18 +69,29 @@ public class CornerBlock extends Block implements SimpleWaterloggedBlock {
 
         if (direction == Direction.DOWN) {
             return switch (directionPlacement) {
-                case EAST -> blockState.setValue(TYPE, VerticalDirectionType.UP_EAST);
-                case WEST -> blockState.setValue(TYPE, VerticalDirectionType.UP_WEST);
-                case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.UP_SOUTH);
-                default -> blockState.setValue(TYPE, VerticalDirectionType.UP_NORTH);
+                case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_EAST);
+                case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_WEST);
+                case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_SOUTH);
+                default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_NORTH);
             };
+        } else {
+            double placementCursor = pContext.getClickLocation().y - blockPos.getY();
+            if (placementCursor < 0.5) {
+                return switch (directionPlacement) {
+                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_EAST);
+                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_WEST);
+                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_SOUTH);
+                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_NORTH);
+                };
+            } else {
+                return switch (directionPlacement) {
+                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_EAST);
+                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_WEST);
+                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_SOUTH);
+                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_NORTH);
+                };
+            }
         }
-        return switch (directionPlacement) {
-            case EAST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_EAST);
-            case WEST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_WEST);
-            case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_SOUTH);
-            default -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_NORTH);
-        };
     }
 
     @Override

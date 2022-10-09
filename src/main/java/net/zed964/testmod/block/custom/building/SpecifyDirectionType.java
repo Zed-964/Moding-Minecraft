@@ -3,7 +3,7 @@ package net.zed964.testmod.block.custom.building;
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
 
-public enum VerticalDirectionType implements StringRepresentable {
+public enum SpecifyDirectionType implements StringRepresentable {
     DOWN_NORTH("down_north"),
     DOWN_EAST("down_east"),
     DOWN_WEST("down_west"),
@@ -15,7 +15,7 @@ public enum VerticalDirectionType implements StringRepresentable {
 
     private final String name;
 
-    private VerticalDirectionType(String pName) {
+    private SpecifyDirectionType(String pName) {
         this.name = pName;
     }
 

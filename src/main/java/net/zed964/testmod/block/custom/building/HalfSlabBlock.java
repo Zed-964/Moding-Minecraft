@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class HalfSlabBlock extends Block implements SimpleWaterloggedBlock {
-    public static final EnumProperty<VerticalDirectionType> TYPE = ModBlockStateProperties.HALF_SLAB_TYPE;
+    public static final EnumProperty<SpecifyDirectionType> SPECIFY_FACING = ModBlockStateProperties.SPECIFY_DIRECTION_TYPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected static final VoxelShape DOWN_NORTH_AABB = Block.box(0, 0, 0, 16, 8, 8);
@@ -35,18 +35,18 @@ public class HalfSlabBlock extends Block implements SimpleWaterloggedBlock {
 
     public HalfSlabBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.defaultBlockState().setValue(TYPE, VerticalDirectionType.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.defaultBlockState().setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(TYPE, WATERLOGGED);
+        pBuilder.add(SPECIFY_FACING, WATERLOGGED);
     }
 
     @Override
     public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-        VerticalDirectionType verticalDirectionType = pState.getValue(TYPE);
-        return switch (verticalDirectionType) {
+        SpecifyDirectionType specifyDirectionType = pState.getValue(SPECIFY_FACING);
+        return switch (specifyDirectionType) {
             case DOWN_EAST -> DOWN_EAST_AABB;
             case DOWN_WEST -> DOWN_WEST_AABB;
             case DOWN_SOUTH -> DOWN_SOUTH_AABB;
@@ -69,26 +69,26 @@ public class HalfSlabBlock extends Block implements SimpleWaterloggedBlock {
 
         if (direction == Direction.DOWN) {
             return switch (directionPlacement) {
-                case EAST -> blockState.setValue(TYPE, VerticalDirectionType.UP_EAST);
-                case WEST -> blockState.setValue(TYPE, VerticalDirectionType.UP_WEST);
-                case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.UP_SOUTH);
-                default -> blockState.setValue(TYPE, VerticalDirectionType.UP_NORTH);
+                case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_EAST);
+                case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_WEST);
+                case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_SOUTH);
+                default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_NORTH);
             };
         } else {
-            double test = pContext.getClickLocation().y - blockPos.getY();
-            if (test < 0.5) {
+            double placementCursor = pContext.getClickLocation().y - blockPos.getY();
+            if (placementCursor < 0.5) {
                 return switch (directionPlacement) {
-                    case EAST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_EAST);
-                    case WEST -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_WEST);
-                    case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_SOUTH);
-                    default -> blockState.setValue(TYPE, VerticalDirectionType.DOWN_NORTH);
+                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_EAST);
+                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_WEST);
+                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_SOUTH);
+                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_NORTH);
                 };
             } else {
                 return switch (directionPlacement) {
-                    case EAST -> blockState.setValue(TYPE, VerticalDirectionType.UP_EAST);
-                    case WEST -> blockState.setValue(TYPE, VerticalDirectionType.UP_WEST);
-                    case SOUTH -> blockState.setValue(TYPE, VerticalDirectionType.UP_SOUTH);
-                    default -> blockState.setValue(TYPE, VerticalDirectionType.UP_NORTH);
+                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_EAST);
+                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_WEST);
+                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_SOUTH);
+                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_NORTH);
                 };
             }
         }
