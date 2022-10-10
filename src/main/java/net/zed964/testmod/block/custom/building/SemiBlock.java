@@ -21,24 +21,29 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class HorizontalStairsBlock extends Block implements SimpleWaterloggedBlock {
+public class SemiBlock extends Block implements SimpleWaterloggedBlock {
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected static final VoxelShape VERTICAL_SLAB_NORTH_AABB = Block.box(0, 0, 0, 16, 16, 8);
-    protected static final VoxelShape VERTICAL_HALF_SLAB_NORTH_AABB = Block.box(8, 0, 8, 16, 16, 16);
-
-    protected static final VoxelShape VERTICAL_SLAB_EAST_AABB = Block.box(8, 0, 0, 16, 16, 16);
-    protected static final VoxelShape VERTICAL_HALF_SLAB_EAST_AABB = Block.box(0, 0, 8, 8, 16, 16);
-
-    protected static final VoxelShape VERTICAL_SLAB_WEST_AABB = Block.box(0, 0, 0, 8, 16, 16);
-    protected static final VoxelShape VERTICAL_HALF_SLAB_WEST_AABB = Block.box(8, 0, 0, 16, 16, 8);
-
-    protected static final VoxelShape VERTICAL_SLAB_SOUTH_AABB = Block.box(0, 0, 8, 16, 16, 16);
-    protected static final VoxelShape VERTICAL_HALF_SLAB_SOUTH_AABB = Block.box(0, 0, 0, 8, 16, 8);
+    protected static final VoxelShape HALF_SLAB_NORTH_AABB = Block.box(0, 0, 0, 16, 8, 8);
+    protected static final VoxelShape CORNER_NORTH_AABB = Block.box(8, 0, 8, 16, 8, 16);
+    protected static final VoxelShape CORNER_TOP_NORTH_AABB = Block.box(8, 8, 0, 16, 16, 8);
 
 
-    public HorizontalStairsBlock(BlockBehaviour.Properties pProperties) {
+    protected static final VoxelShape HALF_SLAB_EAST_AABB = Block.box(8, 0, 0, 16, 8, 16);
+    protected static final VoxelShape CORNER_EAST_AABB = Block.box(0, 0, 8, 8, 8, 16);
+    protected static final VoxelShape CORNER_TOP_EAST_AABB = Block.box(8, 8, 8, 16, 16, 16);
+
+    protected static final VoxelShape HALF_SLAB_WEST_AABB = Block.box(0, 0, 0, 8, 8, 16);
+    protected static final VoxelShape CORNER_WEST_AABB = Block.box(8, 0, 0, 16, 8, 8);
+    protected static final VoxelShape CORNER_TOP_WEST_AABB = Block.box(0, 8, 0, 8, 16, 8);
+
+    protected static final VoxelShape HALF_SLAB_SOUTH_AABB = Block.box(0, 0, 8, 16, 8, 16);
+    protected static final VoxelShape CORNER_SOUTH_AABB = Block.box(0, 0, 0, 8, 8, 8);
+    protected static final VoxelShape CORNER_TOP_SOUTH_AABB = Block.box(0, 8, 8, 8, 16, 16);
+
+
+    public SemiBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
@@ -53,10 +58,11 @@ public class HorizontalStairsBlock extends Block implements SimpleWaterloggedBlo
         pBuilder.add(FACING, WATERLOGGED);
     }
 
-    private static VoxelShape makaShape(VoxelShape shape1, VoxelShape shape2) {
+    private static VoxelShape makaShape(VoxelShape shape1, VoxelShape shape2, VoxelShape shape3) {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, shape1, BooleanOp.OR);
         shape = Shapes.join(shape, shape2, BooleanOp.OR);
+        shape = Shapes.join(shape, shape3, BooleanOp.OR);
 
         return shape;
     }
@@ -65,10 +71,11 @@ public class HorizontalStairsBlock extends Block implements SimpleWaterloggedBlo
     public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
         Direction direction = pState.getValue(FACING);
         return switch (direction) {
-            case EAST -> makaShape(VERTICAL_SLAB_EAST_AABB, VERTICAL_HALF_SLAB_EAST_AABB);
-            case WEST -> makaShape(VERTICAL_SLAB_WEST_AABB, VERTICAL_HALF_SLAB_WEST_AABB);
-            case SOUTH -> makaShape(VERTICAL_SLAB_SOUTH_AABB, VERTICAL_HALF_SLAB_SOUTH_AABB);
-            default -> makaShape(VERTICAL_SLAB_NORTH_AABB, VERTICAL_HALF_SLAB_NORTH_AABB);
+            case EAST -> makaShape(HALF_SLAB_EAST_AABB, CORNER_EAST_AABB, CORNER_TOP_EAST_AABB);
+            case WEST -> makaShape(HALF_SLAB_WEST_AABB, CORNER_WEST_AABB, CORNER_TOP_WEST_AABB);
+            case SOUTH -> makaShape(HALF_SLAB_SOUTH_AABB, CORNER_SOUTH_AABB, CORNER_TOP_SOUTH_AABB);
+            default -> makaShape(HALF_SLAB_NORTH_AABB, CORNER_NORTH_AABB, CORNER_TOP_NORTH_AABB);
+
         };
     }
 

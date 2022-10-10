@@ -38,5 +38,9 @@
 
   "block.testmod.asteroid_corner": "Asteroid Corner",
 
+  "block.testmod.asteroid_horizontal_stairs": "Asteroid Horizontal Stairs",
+
+  "block.testmod.asteroid_semi_block": "Asteroid Semi Block",
+
   "itemGroup.testmod_tab": "Test Mod"
 }

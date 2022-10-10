@@ -32,6 +32,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ASTEROID_VERTICAL_HALF_SLAB = registerBlock("asteroid_vertical_half_slab", () -> new VerticalHalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
     public static final RegistryObject<Block> ASTEROID_CORNER = registerBlock("asteroid_corner", () -> new CornerBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
     public static final RegistryObject<Block> ASTEROID_HORIZONTAL_STAIRS = registerBlock("asteroid_horizontal_stairs", () -> new HorizontalStairsBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
+    public static final RegistryObject<Block> ASTEROID_SEMI_BLOCK = registerBlock("asteroid_semi_block", () -> new SemiBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.TESTMOD_TAB);
 
     //-------------Ressource from Minecraft ( in asteroid )
     public static final RegistryObject<Block> ASTEROID_COAL_ORE = registerBlock("asteroid_coal_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.TESTMOD_TAB);

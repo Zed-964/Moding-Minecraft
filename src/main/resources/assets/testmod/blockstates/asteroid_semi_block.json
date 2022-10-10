@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "testmod:block/asteroid_semi_block", "y": 90, "uvlock": true },
+    "facing=east": {
+      "model": "testmod:block/asteroid_semi_block", "y": 180, "uvlock": true  },
+    "facing=west": {
+      "model": "testmod:block/asteroid_semi_block", "y": 0, "uvlock": true  },
+    "facing=south": {
+      "model": "testmod:block/asteroid_semi_block", "y": 270, "uvlock": true  }
+  }
+}
