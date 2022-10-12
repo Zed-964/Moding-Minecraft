@@ -2,7 +2,7 @@
   "parent": "minecraft:/block/block",
   "display": {
     "gui": {
-      "rotation": [ 210, 135, 180 ],
+      "rotation": [ 210, 135, 270 ],
       "translation": [ 0, 0, 0],
       "scale":[ 0.625, 0.625, 0.625 ]
     },

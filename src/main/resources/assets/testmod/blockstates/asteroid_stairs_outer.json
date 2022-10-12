@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "type=down_east": {
+      "model": "testmod:block/asteroid_stairs_outer", "y": 0, "uvlock": true
+    },
+    "type=down_west": {
+      "model": "testmod:block/asteroid_stairs_outer", "y": 180, "uvlock": true
+    },
+    "type=down_south": {
+      "model": "testmod:block/asteroid_stairs_outer", "y": 90, "uvlock": true
+    },
+    "type=down_north": {
+      "model": "testmod:block/asteroid_stairs_outer", "y": 270, "uvlock": true
+    },
+    "type=up_east":{
+      "model": "testmod:block/asteroid_stairs_outer_top", "y": 0, "uvlock": true
+    },
+    "type=up_west": {
+      "model": "testmod:block/asteroid_stairs_outer_top", "y": 180, "uvlock": true
+    },
+    "type=up_south": {
+      "model": "testmod:block/asteroid_stairs_outer_top", "y": 90, "uvlock": true
+    },
+    "type=up_north": {
+      "model": "testmod:block/asteroid_stairs_outer_top", "y": 270, "uvlock": true
+    }
+  }
+}

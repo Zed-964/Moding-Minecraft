@@ -1,12 +1,20 @@
 {
   "variants": {
-    "facing=north": {
+    "type=down_north": {
       "model": "testmod:block/asteroid_semi_block", "y": 90, "uvlock": true },
-    "facing=east": {
+    "type=down_east": {
       "model": "testmod:block/asteroid_semi_block", "y": 180, "uvlock": true  },
-    "facing=west": {
+    "type=down_west": {
       "model": "testmod:block/asteroid_semi_block", "y": 0, "uvlock": true  },
-    "facing=south": {
-      "model": "testmod:block/asteroid_semi_block", "y": 270, "uvlock": true  }
+    "type=down_south": {
+      "model": "testmod:block/asteroid_semi_block", "y": 270, "uvlock": true  },
+    "type=up_north": {
+      "model": "testmod:block/asteroid_semi_block_top", "y": 90, "uvlock": true  },
+    "type=up_east": {
+      "model": "testmod:block/asteroid_semi_block_top", "y": 180, "uvlock": true  },
+    "type=up_west": {
+      "model": "testmod:block/asteroid_semi_block_top", "y": 0, "uvlock": true  },
+    "type=up_south": {
+      "model": "testmod:block/asteroid_semi_block_top", "y": 270, "uvlock": true  }
   }
 }

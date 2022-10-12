@@ -21,10 +21,17 @@
   "block.testmod.platinum_ore": "Platinum Ore",
   "block.testmod.aluminum_ore": "Uranium Ore",
 
-
   "block.testmod.deepslate_uranium_ore": "Deepslate Aluminum Ore",
   "block.testmod.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.testmod.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
+
+  "block.testmod.block_of_aluminum": "Block Of Aluminum",
+  "block.testmod.block_of_platinum": "Block Of Platinum",
+  "block.testmod.block_of_uranium": "Block Of Uranium",
+
+  "block.testmod.block_of_raw_aluminum": "Block Of Raw Aluminum",
+  "block.testmod.block_of_raw_platinum": "Block Of Raw Platinum",
+  "block.testmod.block_of_raw_uranium": "Block Of Raw Uranium",
 
   "block.testmod.asteroid_slab": "Asteroid Slab",
 
@@ -41,6 +48,11 @@
   "block.testmod.asteroid_horizontal_stairs": "Asteroid Horizontal Stairs",
 
   "block.testmod.asteroid_semi_block": "Asteroid Semi Block",
+
+  "block.testmod.asteroid_stairs_outer": "Asteroid Stairs Outer",
+
+  "block.testmod.asteroid_stairs_inner": "Asteroid Stairs Inner",
+
 
   "itemGroup.testmod_tab": "Test Mod"
 }

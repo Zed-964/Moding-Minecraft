@@ -1,4 +1,4 @@
-package net.zed964.testmod.block.custom.building;
+package net.zed964.testmod.block.building;
 
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
