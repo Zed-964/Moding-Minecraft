@@ -1,8 +1,0 @@
-{
-  "parent": "testmod:block/corner",
-  "textures": {
-    "bottom": "testmod:block/asteroid_block",
-    "top": "testmod:block/asteroid_block",
-    "side": "testmod:block/asteroid_block"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "testmod:block/stairs_outer_top",
-  "textures": {
-    "bottom": "testmod:block/asteroid_block",
-    "top": "testmod:block/asteroid_block",
-    "side": "testmod:block/asteroid_block"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "testmod:block/semi_block",
-  "textures": {
-    "bottom": "testmod:block/asteroid_block",
-    "top": "testmod:block/asteroid_block",
-    "side": "testmod:block/asteroid_block"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "testmod:block/vertical_slab1",
-  "textures": {
-    "bottom": "testmod:block/asteroid_block",
-    "top": "testmod:block/asteroid_block",
-    "side": "testmod:block/asteroid_block"
-  }
-}

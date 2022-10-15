@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "obscurestars:block/asteroid_block",
+    "top": "obscurestars:block/asteroid_block",
+    "side": "obscurestars:block/asteroid_block"
+  }
+}

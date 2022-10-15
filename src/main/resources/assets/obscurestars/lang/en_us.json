@@ -1,0 +1,60 @@
+{
+  "item.obscurestars.asteroid_piece": "Asteroid Piece",
+  "item.obscurestars.raw_uranium": "Raw Uranium",
+  "item.obscurestars.uranium_ingot": "Uranium Ingot",
+
+  "item.obscurestars.hydrogen_bucket": "Hydrogen Bucket",
+
+  "block.obscurestars.asteroid_block": "Asteroid Block",
+  "block.obscurestars.asteroid_coal_ore": "Asteroid Coal Ore",
+  "block.obscurestars.asteroid_iron_ore": "Asteroid Iron Ore",
+  "block.obscurestars.asteroid_copper_ore": "Asteroid Copper Ore",
+  "block.obscurestars.asteroid_gold_ore": "Asteroid Gold Ore",
+  "block.obscurestars.asteroid_redstone_ore": "Asteroid Redstone Ore",
+  "block.obscurestars.asteroid_emerald_ore": "Asteroid Emerald Ore",
+  "block.obscurestars.asteroid_lapis_lazuli_ore": "Asteroid Lapis Lazuli Ore",
+  "block.obscurestars.asteroid_diamond_ore": "Asteroid Diamond Ore",
+  "block.obscurestars.asteroid_quartz_ore": "Asteroid Quartz Ore",
+  "block.obscurestars.asteroid_uranium_ore": "Asteroid Uranium Ore",
+  "block.obscurestars.asteroid_platinum_ore": "Asteroid Platinum Ore",
+  "block.obscurestars.asteroid_aluminum_ore": "Asteroid Aluminum Ore",
+
+  "block.obscurestars.uranium_ore": "Uranium Ore",
+  "block.obscurestars.platinum_ore": "Platinum Ore",
+  "block.obscurestars.aluminum_ore": "Uranium Ore",
+
+  "block.obscurestars.deepslate_uranium_ore": "Deepslate Aluminum Ore",
+  "block.obscurestars.deepslate_platinum_ore": "Deepslate Platinum Ore",
+  "block.obscurestars.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
+
+  "block.obscurestars.block_of_aluminum": "Block Of Aluminum",
+  "block.obscurestars.block_of_platinum": "Block Of Platinum",
+  "block.obscurestars.block_of_uranium": "Block Of Uranium",
+
+  "block.obscurestars.block_of_raw_aluminum": "Block Of Raw Aluminum",
+  "block.obscurestars.block_of_raw_platinum": "Block Of Raw Platinum",
+  "block.obscurestars.block_of_raw_uranium": "Block Of Raw Uranium",
+
+  "block.obscurestars.asteroid_slab": "Asteroid Slab",
+
+  "block.obscurestars.asteroid_stairs": "Asteroid Stairs",
+
+  "block.obscurestars.asteroid_vertical_slab": "Asteroid Vertical Slab",
+
+  "block.obscurestars.asteroid_half_slab": "Asteroid Half Slab",
+
+  "block.obscurestars.asteroid_vertical_half_slab": "Asteroid Vertical Half Slab",
+
+  "block.obscurestars.asteroid_corner": "Asteroid Corner",
+
+  "block.obscurestars.asteroid_horizontal_stairs": "Asteroid Horizontal Stairs",
+
+  "block.obscurestars.asteroid_semi_block": "Asteroid Semi Block",
+
+  "block.obscurestars.asteroid_stairs_outer": "Asteroid Stairs Outer",
+
+  "block.obscurestars.asteroid_stairs_inner": "Asteroid Stairs Inner",
+
+
+  "itemGroup.obscurestars_tab": "Obscure Stars"
+}
