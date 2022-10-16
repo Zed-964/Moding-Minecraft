@@ -1,9 +1,23 @@
 {
   "item.obscurestars.asteroid_piece": "Asteroid Piece",
+
   "item.obscurestars.raw_uranium": "Raw Uranium",
+  "item.obscurestars.raw_platinum": "Raw Platinum",
+  "item.obscurestars.raw_aluminum": "Raw Aluminum",
+
   "item.obscurestars.uranium_ingot": "Uranium Ingot",
+  "item.obscurestars.platinum_ingot": "Platinum Ingot",
+  "item.obscurestars.aluminum_ingot": "Aluminum Ingot",
 
   "item.obscurestars.hydrogen_bucket": "Hydrogen Bucket",
+  "item.obscurestars.fluor_bucket": "Fluor Bucket",
+  "item.obscurestars.hydrazine_bucket": "Hydrazine Bucket",
+  "item.obscurestars.udmh_bucket": "UDMH Bucket",
+  "item.obscurestars.oxygen_bucket": "Oxygen Bucket",
+  "item.obscurestars.kerosene_bucket": "Kerosene Bucket",
+  "item.obscurestars.nitric_acid_bucket": "Nitric Acid Bucket",
+  "item.obscurestars.nitrogen_peroxide_bucket": "Nitrogen Peroxide Bucket",
+
 
   "block.obscurestars.asteroid_block": "Asteroid Block",
   "block.obscurestars.asteroid_coal_ore": "Asteroid Coal Ore",

@@ -1,7 +1,21 @@
 {
   "replace": false,
   "values": [
-    "obcurestars:hydrogen_flowing",
-    "obcurestars:hydrogen_fluid"
+    "obscurestars:hydrogen_flowing",
+    "obscurestars:hydrogen_fluid",
+    "obscurestars:fluor_flowing",
+    "obscurestars:fluor_fluid",
+    "obscurestars:hydrazine_flowing",
+    "obscurestars:hydrazine_fluid",
+    "obscurestars:udmh_flowing",
+    "obscurestars:udmh_fluid",
+    "obscurestars:oxygen_flowing",
+    "obscurestars:oxygen_fluid",
+    "obscurestars:kerosene_flowing",
+    "obscurestars:kerosene_fluid",
+    "obscurestars:nitric_acid_flowing",
+    "obscurestars:nitric_acid_fluid",
+    "obscurestars:nitrogen_peroxide_flowing",
+    "obscurestars:nitrogen_peroxide_fluid"
   ]
 }
