@@ -20,6 +20,8 @@
 
 
   "block.obscurestars.asteroid_block": "Asteroid Block",
+  "block.obscurestars.aluminum_alloy_block": "Auminum Alloy Block",
+
   "block.obscurestars.asteroid_coal_ore": "Asteroid Coal Ore",
   "block.obscurestars.asteroid_iron_ore": "Asteroid Iron Ore",
   "block.obscurestars.asteroid_copper_ore": "Asteroid Copper Ore",
@@ -50,25 +52,37 @@
   "block.obscurestars.block_of_raw_uranium": "Block Of Raw Uranium",
 
   "block.obscurestars.asteroid_slab": "Asteroid Slab",
+  "block.obscurestars.aluminum_alloy_slab": "Aluminum Alloy Slab",
 
   "block.obscurestars.asteroid_stairs": "Asteroid Stairs",
+  "block.obscurestars.aluminum_alloy_stairs": "Aluminum Alloy Stairs",
 
   "block.obscurestars.asteroid_vertical_slab": "Asteroid Vertical Slab",
+  "block.obscurestars.aluminum_alloy_vertical_slab": "Aluminum Alloy Vertical Slab",
 
   "block.obscurestars.asteroid_half_slab": "Asteroid Half Slab",
+  "block.obscurestars.aluminum_alloy_half_slab": "Aluminum Alloy Half Slab",
 
   "block.obscurestars.asteroid_vertical_half_slab": "Asteroid Vertical Half Slab",
+  "block.obscurestars.aluminum_alloy_vertical_half_slab": "Aluminum Alloy Vertical Half Slab",
 
   "block.obscurestars.asteroid_corner": "Asteroid Corner",
+  "block.obscurestars.aluminum_alloy_corner": "Aluminum Alloy Corner",
 
   "block.obscurestars.asteroid_horizontal_stairs": "Asteroid Horizontal Stairs",
+  "block.obscurestars.aluminum_alloy_horizontal_stairs": "Aluminum Alloy Horizontal Stairs",
 
   "block.obscurestars.asteroid_semi_block": "Asteroid Semi Block",
+  "block.obscurestars.aluminum_alloy_semi_block": "Aluminum Alloy Semi Block",
 
   "block.obscurestars.asteroid_stairs_outer": "Asteroid Stairs Outer",
+  "block.obscurestars.aluminum_alloy_stairs_outer": "Aluminum Alloy Stairs Outer",
 
   "block.obscurestars.asteroid_stairs_inner": "Asteroid Stairs Inner",
+  "block.obscurestars.aluminum_alloy_stairs_inner": "Aluminum Alloy Stairs Inner",
 
 
-  "itemGroup.obscurestars_tab": "Obscure Stars"
+  "itemGroup.obscurestars_tab": "Obscure Stars",
+  "itemGroup.obscurestars_tab_rocket_component": "Rocket Component"
+
 }

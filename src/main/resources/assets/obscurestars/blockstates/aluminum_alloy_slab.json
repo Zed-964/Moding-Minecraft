@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obscurestars:block/aluminum_alloy_slab"
+    },
+    "type=double": {
+      "model": "obscurestars:block/aluminum_alloy_block"
+    },
+    "type=top": {
+      "model": "obscurestars:block/aluminum_alloy_slab_top"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "type=down_east": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner", "y": 0, "uvlock": true
+    },
+    "type=down_west": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner", "y": 180, "uvlock": true
+    },
+    "type=down_south": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner", "y": 90, "uvlock": true
+    },
+    "type=down_north": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner", "y": 270, "uvlock": true
+    },
+    "type=up_east":{
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner_top", "y": 90, "uvlock": true
+    },
+    "type=up_west": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner_top", "y": 270, "uvlock": true
+    },
+    "type=up_south": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner_top", "y": 180, "uvlock": true
+    },
+    "type=up_north": {
+      "model": "obscurestars:block/aluminum_alloy_stairs_inner_top", "y": 0, "uvlock": true
+    }
+  }
+}

@@ -66,6 +66,32 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOCK_OF_ALUMINUM = registerBlock("block_of_aluminum", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> BLOCK_OF_RAW_ALUMINUM = registerBlock("block_of_raw_aluminum", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
 
+    //-------------STRUCTURE ROCKEET COMPONENT
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_BLOCK = registerBlock("aluminum_alloy_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_STAIRS = registerBlock("aluminum_alloy_stairs", () -> new StairBlock(() -> ModBlocks.ASTEROID_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_SLAB = registerBlock("aluminum_alloy_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_VERTICAL_SLAB = registerBlock("aluminum_alloy_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_HALF_SLAB = registerBlock("aluminum_alloy_half_slab", () -> new HalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_VERTICAL_HALF_SLAB = registerBlock("aluminum_alloy_vertical_half_slab", () -> new VerticalHalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_CORNER = registerBlock("aluminum_alloy_corner", () -> new CornerBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_HORIZONTAL_STAIRS = registerBlock("aluminum_alloy_horizontal_stairs", () -> new HorizontalStairsBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_SEMI_BLOCK = registerBlock("aluminum_alloy_semi_block", () -> new SemiBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_STAIRS_OUTER = registerBlock("aluminum_alloy_stairs_outer", () -> new StairsOuterBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> ALUMINUM_ALLOY_STAIRS_INNER = registerBlock("aluminum_alloy_stairs_inner", () -> new StairsInnerBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+
+
+    public static final RegistryObject<Block> OBSCURE_ALLOY_BLOCK = registerBlock("obscure_alloy_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS = registerBlock("obscure_alloy_stairs", () -> new StairBlock(() -> ModBlocks.ASTEROID_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_SLAB = registerBlock("obscure_alloy_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_VERTICAL_SLAB = registerBlock("obscure_alloy_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_HALF_SLAB = registerBlock("obscure_alloy_half_slab", () -> new HalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_VERTICAL_HALF_SLAB = registerBlock("obscure_alloy_vertical_half_slab", () -> new VerticalHalfSlabBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_CORNER = registerBlock("obscure_alloy_corner", () -> new CornerBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_HORIZONTAL_STAIRS = registerBlock("obscure_alloy_horizontal_stairs", () -> new HorizontalStairsBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_SEMI_BLOCK = registerBlock("obscure_alloy_semi_block", () -> new SemiBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS_OUTER = registerBlock("obscure_alloy_stairs_outer", () -> new StairsOuterBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS_INNER = registerBlock("obscure_alloy_stairs_inner", () -> new StairsInnerBlock(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -11,4 +11,11 @@ public class ModCreativeTab {
             return new ItemStack(ModItems.RAW_URANIUM.get());
         }
     };
+
+    public static final CreativeModeTab OBSCURESTARS_TAB_ROCKET_COMPONENT = new CreativeModeTab("obscurestars_tab_rocket_component") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.RAW_URANIUM.get());
+        }
+    };
 }
