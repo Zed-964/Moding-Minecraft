@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "obscurestars:block/wip_block",
+    "top": "obscurestars:block/wip_block",
+    "side": "obscurestars:block/wip_block"
+  }
+}

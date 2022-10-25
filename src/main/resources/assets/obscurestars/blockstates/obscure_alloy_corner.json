@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "type=down_north": {
+      "model": "obscurestars:block/obscure_alloy_corner", "y": 180, "uvlock": true },
+    "type=down_east": {
+      "model": "obscurestars:block/obscure_alloy_corner", "y": 270, "uvlock": true  },
+    "type=down_west": {
+      "model": "obscurestars:block/obscure_alloy_corner", "y": 90, "uvlock": true  },
+    "type=down_south": {
+      "model": "obscurestars:block/obscure_alloy_corner", "y": 0, "uvlock": true  },
+    "type=up_north": {
+      "model": "obscurestars:block/obscure_alloy_corner_top", "y": 180, "uvlock": true  },
+    "type=up_east": {
+      "model": "obscurestars:block/obscure_alloy_corner_top", "y": 270, "uvlock": true  },
+    "type=up_west": {
+      "model": "obscurestars:block/obscure_alloy_corner_top", "y": 90, "uvlock": true  },
+    "type=up_south": {
+      "model": "obscurestars:block/obscure_alloy_corner_top", "y": 0, "uvlock": true  }
+  }
+}

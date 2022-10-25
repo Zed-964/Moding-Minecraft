@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "obscurestars:block/obscure_alloy_horizontal_stairs", "y": 270, "uvlock": true },
+    "facing=east": {
+      "model": "obscurestars:block/obscure_alloy_horizontal_stairs", "y": 0, "uvlock": true  },
+    "facing=west": {
+      "model": "obscurestars:block/obscure_alloy_horizontal_stairs", "y": 180, "uvlock": true  },
+    "facing=south": {
+      "model": "obscurestars:block/obscure_alloy_horizontal_stairs", "y": 90, "uvlock": true  }
+  }
+}

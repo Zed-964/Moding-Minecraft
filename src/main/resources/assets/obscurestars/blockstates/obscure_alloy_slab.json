@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obscurestars:block/obscure_alloy_slab"
+    },
+    "type=double": {
+      "model": "obscurestars:block/obscure_alloy_block"
+    },
+    "type=top": {
+      "model": "obscurestars:block/obscure_alloy_slab_top"
+    }
+  }
+}
