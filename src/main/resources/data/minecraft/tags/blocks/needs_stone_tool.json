@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "obscurestars:asteroid_block",
+    "obscurestars:asteroid_stairs",
+    "obscurestars:asteroid_slab",
+    "obscurestars:asteroid_vertical_slab",
+    "obscurestars:asteroid_half_slab",
+    "obscurestars:asteroid_vertical_half_slab",
+    "obscurestars:asteroid_corner",
+    "obscurestars:asteroid_horizontal_stairs",
+    "obscurestars:asteroid_semi_block",
+    "obscurestars:asteroid_stairs_outer",
+    "obscurestars:asteroid_stairs_inner",
+
+    "obscurestars:asteroid_iron_ore",
+    "obscurestars:asteroid_copper_ore",
+    "obscurestars:asteroid_lapis_lazuli_ore",
+
+    "obscurestars:aluminum_ore",
+    "obscurestars:deepslate_aluminum_ore",
+    "obscurestars:asteroid_aluminum_ore",
+    "obscurestars:aluminum_block",
+    "obscurestars:raw_aluminum_block"
+  ]
+}

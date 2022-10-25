@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "obscurestars:platinum_ore",
+    "obscurestars:deepslate_platinum_ore",
+    "obscurestars:asteroid_platinum_ore",
+    "obscurestars:platinum_block",
+    "obscurestars:raw_platinum_block",
+
+    "obscurestars:obscure_alloy_block",
+    "obscurestars:obscure_alloy_stairs",
+    "obscurestars:obscure_alloy_slab",
+    "obscurestars:obscure_alloy_vertical_slab",
+    "obscurestars:obscure_alloy_half_slab",
+    "obscurestars:obscure_alloy_vertical_half_slab",
+    "obscurestars:obscure_alloy_corner",
+    "obscurestars:obscure_alloy_horizontal_stairs",
+    "obscurestars:obscure_alloy_semi_block",
+    "obscurestars:obscure_alloy_stairs_outer",
+    "obscurestars:obscure_alloy_stairs_inner"
+  ]
+}

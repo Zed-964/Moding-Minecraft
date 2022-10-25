@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "obscurestars:asteroid_diamond_ore",
+    "obscurestars:asteroid_gold_ore",
+    "obscurestars:asteroid_emerald_ore",
+    "obscurestars:asteroid_redstone_ore",
+
+    "obscurestars:uranium_ore",
+    "obscurestars:deepslate_uranium_ore",
+    "obscurestars:asteroid_uranium_ore",
+    "obscurestars:uranium_block",
+    "obscurestars:raw_uranium_block",
+
+    "obscurestars:aluminum_alloy_block",
+    "obscurestars:aluminum_alloy_stairs",
+    "obscurestars:aluminum_alloy_slab",
+    "obscurestars:aluminum_alloy_vertical_slab",
+    "obscurestars:aluminum_alloy_half_slab",
+    "obscurestars:aluminum_alloy_vertical_half_slab",
+    "obscurestars:aluminum_alloy_corner",
+    "obscurestars:aluminum_alloy_horizontal_stairs",
+    "obscurestars:aluminum_alloy_semi_block",
+    "obscurestars:aluminum_alloy_stairs_outer",
+    "obscurestars:aluminum_alloy_stairs_inner"
+  ]
+}
