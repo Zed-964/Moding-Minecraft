@@ -1,5 +1,5 @@
 {
-  "parent": "obscurestars:block/half_slab",
+  "parent": "obscurestars:block/stairs_inner_top",
   "textures": {
     "bottom": "obscurestars:block/wip_block",
     "top": "obscurestars:block/wip_block",
