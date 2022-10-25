@@ -21,6 +21,7 @@
 
   "block.obscurestars.asteroid_block": "Asteroid Block",
   "block.obscurestars.aluminum_alloy_block": "Auminum Alloy Block",
+  "block.obscurestars.obscure_alloy_block": "Obscure Alloy Block",
 
   "block.obscurestars.asteroid_coal_ore": "Asteroid Coal Ore",
   "block.obscurestars.asteroid_iron_ore": "Asteroid Iron Ore",
@@ -37,50 +38,59 @@
 
   "block.obscurestars.uranium_ore": "Uranium Ore",
   "block.obscurestars.platinum_ore": "Platinum Ore",
-  "block.obscurestars.aluminum_ore": "Uranium Ore",
+  "block.obscurestars.aluminum_ore": "Aluminum Ore",
 
   "block.obscurestars.deepslate_uranium_ore": "Deepslate Aluminum Ore",
   "block.obscurestars.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.obscurestars.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
 
-  "block.obscurestars.block_of_aluminum": "Block Of Aluminum",
-  "block.obscurestars.block_of_platinum": "Block Of Platinum",
-  "block.obscurestars.block_of_uranium": "Block Of Uranium",
+  "block.obscurestars.aluminum_block": "Block Of Aluminum",
+  "block.obscurestars.platinum_block": "Block Of Platinum",
+  "block.obscurestars.uranium_block": "Block Of Uranium",
 
-  "block.obscurestars.block_of_raw_aluminum": "Block Of Raw Aluminum",
-  "block.obscurestars.block_of_raw_platinum": "Block Of Raw Platinum",
-  "block.obscurestars.block_of_raw_uranium": "Block Of Raw Uranium",
+  "block.obscurestars.raw_aluminum_block": "Block Of Raw Aluminum",
+  "block.obscurestars.raw_platinum_block": "Block Of Raw Platinum",
+  "block.obscurestars.raw_uranium_block": "Block Of Raw Uranium",
 
   "block.obscurestars.asteroid_slab": "Asteroid Slab",
   "block.obscurestars.aluminum_alloy_slab": "Aluminum Alloy Slab",
+  "block.obscurestars.obscure_alloy_slab": "Obscure Alloy Slab",
 
   "block.obscurestars.asteroid_stairs": "Asteroid Stairs",
   "block.obscurestars.aluminum_alloy_stairs": "Aluminum Alloy Stairs",
+  "block.obscurestars.obscure_alloy_stairs": "Obscure Alloy Stairs",
 
   "block.obscurestars.asteroid_vertical_slab": "Asteroid Vertical Slab",
   "block.obscurestars.aluminum_alloy_vertical_slab": "Aluminum Alloy Vertical Slab",
+  "block.obscurestars.obscure_alloy_vertical_slab": "Obscure Alloy Vertical Slab",
 
   "block.obscurestars.asteroid_half_slab": "Asteroid Half Slab",
   "block.obscurestars.aluminum_alloy_half_slab": "Aluminum Alloy Half Slab",
+  "block.obscurestars.obscure_alloy_half_slab": "Obscure Alloy Half Slab",
 
   "block.obscurestars.asteroid_vertical_half_slab": "Asteroid Vertical Half Slab",
   "block.obscurestars.aluminum_alloy_vertical_half_slab": "Aluminum Alloy Vertical Half Slab",
+  "block.obscurestars.obscure_alloy_vertical_half_slab": "Obscure Alloy Vertical Half Slab",
 
   "block.obscurestars.asteroid_corner": "Asteroid Corner",
   "block.obscurestars.aluminum_alloy_corner": "Aluminum Alloy Corner",
+  "block.obscurestars.obscure_alloy_corner": "Obscure Alloy Corner",
 
   "block.obscurestars.asteroid_horizontal_stairs": "Asteroid Horizontal Stairs",
   "block.obscurestars.aluminum_alloy_horizontal_stairs": "Aluminum Alloy Horizontal Stairs",
+  "block.obscurestars.obscure_alloy_horizontal_stairs": "Obscure Alloy Horizontal Stairs",
 
   "block.obscurestars.asteroid_semi_block": "Asteroid Semi Block",
   "block.obscurestars.aluminum_alloy_semi_block": "Aluminum Alloy Semi Block",
+  "block.obscurestars.obscure_alloy_semi_block": "Obscure Alloy Semi Block",
 
   "block.obscurestars.asteroid_stairs_outer": "Asteroid Stairs Outer",
   "block.obscurestars.aluminum_alloy_stairs_outer": "Aluminum Alloy Stairs Outer",
+  "block.obscurestars.obscure_alloy_stairs_outer": "Obscure Alloy Stairs Outer",
 
   "block.obscurestars.asteroid_stairs_inner": "Asteroid Stairs Inner",
   "block.obscurestars.aluminum_alloy_stairs_inner": "Aluminum Alloy Stairs Inner",
-
+  "block.obscurestars.obscure_alloy_stairs_inner": "Obscure Alloy Stairs Inner",
 
   "itemGroup.obscurestars_tab": "Obscure Stars",
   "itemGroup.obscurestars_tab_rocket_component": "Rocket Component"

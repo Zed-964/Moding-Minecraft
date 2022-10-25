@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "obscurestars:block/block_of_raw_uranium"
+    "all": "obscurestars:block/wip_block"
   }
 }
