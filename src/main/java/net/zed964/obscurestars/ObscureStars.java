@@ -61,6 +61,9 @@ public class ObscureStars
         ItemBlockRenderTypes.setRenderLayer(ModFluids.NITRIC_ACID_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.NITRIC_ACID_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.NITRIC_ACID_FLOWING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.NITROGEN_PEROXIDE_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.NITROGEN_PEROXIDE_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.NITROGEN_PEROXIDE_FLUID.get(), RenderType.translucent());
     }
 
     private void setup(final FMLCommonSetupEvent event)
