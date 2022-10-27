@@ -41,6 +41,32 @@
     "obscurestars:aluminum_block",
     "obscurestars:raw_aluminum_block",
 
+    "obscurestars:titanium_ore",
+    "obscurestars:deepslate_titanium_ore",
+    "obscurestars:asteroid_titanium_ore",
+    "obscurestars:titanium_block",
+    "obscurestars:raw_titanium_block",
+
+    "obscurestars:iridium_ore",
+    "obscurestars:deepslate_iridium_ore",
+    "obscurestars:asteroid_iridium_ore",
+    "obscurestars:iridium_block",
+    "obscurestars:raw_iridium_block",
+
+    "obscurestars:obscurium_ore",
+    "obscurestars:deepslate_obscurium_ore",
+    "obscurestars:asteroid_obscurium_ore",
+    "obscurestars:obscurium_block",
+    "obscurestars:raw_obscurium_block",
+
+    "obscurestars:starsium_ore",
+    "obscurestars:deepslate_starsium_ore",
+    "obscurestars:asteroid_starsium_ore",
+    "obscurestars:starsium_block",
+    "obscurestars:raw_starsium_block",
+
+    "obscurestars:steel_block",
+
     "obscurestars:aluminum_alloy_block",
     "obscurestars:aluminum_alloy_stairs",
     "obscurestars:aluminum_alloy_slab",

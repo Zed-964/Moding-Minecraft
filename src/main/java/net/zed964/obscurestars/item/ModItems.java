@@ -19,11 +19,19 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_URANIUM = ITEMS.register("raw_uranium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> RAW_PLATINUM = ITEMS.register("raw_platinum", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> RAW_ALUMINUM = ITEMS.register("raw_aluminum", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> RAW_IRIDIUM = ITEMS.register("raw_iridium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> RAW_OBSCURIUM = ITEMS.register("raw_obscurium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> RAW_STARSIUM = ITEMS.register("raw_starsium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
 
     //Ingots
     public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> PLATINIUM_INGOT = ITEMS.register("platinum_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> IRIDIUM_INGOT = ITEMS.register("iridium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> OBSCURIUM_INGOT = ITEMS.register("obscurium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> STARSIUM_INGOT = ITEMS.register("starsium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
 
     //Buckets
     public static final RegistryObject<Item> HYDROGEN_BUCKET = ITEMS.register("hydrogen_bucket", () -> new BucketItem(ModFluids.HYDROGEN_FLUID, new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB).stacksTo(1)));

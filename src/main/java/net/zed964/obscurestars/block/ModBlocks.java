@@ -66,6 +66,32 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = registerBlock("raw_aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
 
+    public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> DEEPSLATE_TITANIUM_ORE = registerBlock("deepslate_titanium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> ASTEROID_TITANIUM_ORE = registerBlock("asteroid_titanium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> RAW_TITANIUM_BLOCK = registerBlock("raw_titanium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+
+    public static final RegistryObject<Block> IRIDIUM_ORE = registerBlock("iridium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> DEEPSLATE_IRIDIUM_ORE = registerBlock("deepslate_iridium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> ASTEROID_IRIDIUM_ORE = registerBlock("asteroid_iridium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> IRIDIUM_BLOCK = registerBlock("iridium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> RAW_IRIDIUM_BLOCK = registerBlock("raw_iridium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+
+    public static final RegistryObject<Block> OBSCURIUM_ORE = registerBlock("obscurium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> DEEPSLATE_OBSCURIUM_ORE = registerBlock("deepslate_obscurium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> ASTEROID_OBSCURIUM_ORE = registerBlock("asteroid_obscurium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> OBSCURIUM_BLOCK = registerBlock("obscurium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> RAW_OBSCURIUM_BLOCK = registerBlock("raw_obscurium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+
+    public static final RegistryObject<Block> STARSIUM_ORE = registerBlock("starsium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> DEEPSLATE_STARSIUM_ORE = registerBlock("deepslate_starsium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> ASTEROID_STARSIUM_ORE = registerBlock("asteroid_starsium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> STARSIUM_BLOCK = registerBlock("starsium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> RAW_STARSIUM_BLOCK = registerBlock("raw_starsium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+
     //-------------STRUCTURE ROCKEET COMPONENT
     public static final RegistryObject<Block> ALUMINUM_ALLOY_BLOCK = registerBlock("aluminum_alloy_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
     public static final RegistryObject<Block> ALUMINUM_ALLOY_STAIRS = registerBlock("aluminum_alloy_stairs", () -> new StairBlock(() -> ModBlocks.ASTEROID_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
@@ -78,7 +104,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALUMINUM_ALLOY_SEMI_BLOCK = registerBlock("aluminum_alloy_semi_block", () -> new SemiBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
     public static final RegistryObject<Block> ALUMINUM_ALLOY_STAIRS_OUTER = registerBlock("aluminum_alloy_stairs_outer", () -> new StairsOuterBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
     public static final RegistryObject<Block> ALUMINUM_ALLOY_STAIRS_INNER = registerBlock("aluminum_alloy_stairs_inner", () -> new StairsInnerBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
-
 
     public static final RegistryObject<Block> OBSCURE_ALLOY_BLOCK = registerBlock("obscure_alloy_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
     public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS = registerBlock("obscure_alloy_stairs", () -> new StairBlock(() -> ModBlocks.ASTEROID_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
