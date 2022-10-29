@@ -8,6 +8,8 @@
   "item.obscurestars.raw_titanium": "Raw Titanium",
   "item.obscurestars.raw_obscurium": "Raw Obscurium",
   "item.obscurestars.raw_starsium": "Raw Starsium",
+  "item.obscurestars.raw_zinc": "Raw Zinc",
+  "item.obscurestars.raw_nickel": "Raw Nickel",
 
   "item.obscurestars.uranium_ingot": "Uranium Ingot",
   "item.obscurestars.platinum_ingot": "Platinum Ingot",
@@ -16,6 +18,19 @@
   "item.obscurestars.titanium_ingot": "Titanium Ingot",
   "item.obscurestars.obscurium_ingot": "Obscurium Ingot",
   "item.obscurestars.starsium_ingot": "Starsium Ingot",
+  "item.obscurestars.zinc_ingot": "Zinc Ingot",
+  "item.obscurestars.nickel_ingot": "Nickel Ingot",
+  "item.obscurestars.steel_ingot": "Steel Ingot",
+
+  "item.obscurestars.uranium_nugget": "Uranium Nugget",
+  "item.obscurestars.platinum_nugget": "Platinum Nugget",
+  "item.obscurestars.aluminum_nugget": "Aluminum Nugget",
+  "item.obscurestars.iridium_nugget": "Iridium Nugget",
+  "item.obscurestars.titanium_nugget": "Titanium Nugget",
+  "item.obscurestars.obscurium_nugget": "Obscurium Nugget",
+  "item.obscurestars.starsium_nugget": "Starsium Nugget",
+  "item.obscurestars.zinc_nugget": "Zinc Nugget",
+  "item.obscurestars.nickel_nugget": "Nickel Nugget",
 
   "item.obscurestars.hydrogen_bucket": "Hydrogen Bucket",
   "item.obscurestars.fluor_bucket": "Fluor Bucket",
@@ -71,6 +86,7 @@
   "block.obscurestars.iridium_block": "Block Of Iridium",
   "block.obscurestars.starsium_block": "Block Of Starsium",
   "block.obscurestars.obscurium_block": "Block Of Obscurium",
+  "block.obscurestars.steel_block": "Block Of Steel",
 
   "block.obscurestars.raw_aluminum_block": "Block Of Raw Aluminum",
   "block.obscurestars.raw_platinum_block": "Block Of Raw Platinum",

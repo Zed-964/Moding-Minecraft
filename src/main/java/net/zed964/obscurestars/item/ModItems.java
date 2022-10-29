@@ -23,6 +23,8 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> RAW_OBSCURIUM = ITEMS.register("raw_obscurium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> RAW_STARSIUM = ITEMS.register("raw_starsium", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> RAW_ZINC = ITEMS.register("raw_zinc", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> RAW_NICKEL = ITEMS.register("raw_nickel", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
 
     //Ingots
     public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
@@ -32,6 +34,20 @@ public class ModItems {
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> OBSCURIUM_INGOT = ITEMS.register("obscurium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
     public static final RegistryObject<Item> STARSIUM_INGOT = ITEMS.register("starsium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> ZINC_INGOT = ITEMS.register("zinc_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+
+    //Nuggets
+    public static final RegistryObject<Item> URANIUM_NUGGET = ITEMS.register("uranium_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> PLATINUM_NUGGET = ITEMS.register("platinum_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> ALUMINUM_NUGGET = ITEMS.register("aluminum_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> IRIDIUM_NUGGET = ITEMS.register("iridium_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> OBSCURIUM_NUGGET = ITEMS.register("obscurium_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> STARSIUM_NUGGET = ITEMS.register("starsium_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> ZINC_NUGGET = ITEMS.register("zinc_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
+    public static final RegistryObject<Item> NICKEL_NUGGET = ITEMS.register("nickel_nugget", () -> new Item(new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB)));
 
     //Buckets
     public static final RegistryObject<Item> HYDROGEN_BUCKET = ITEMS.register("hydrogen_bucket", () -> new BucketItem(ModFluids.HYDROGEN_FLUID, new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB).stacksTo(1)));
