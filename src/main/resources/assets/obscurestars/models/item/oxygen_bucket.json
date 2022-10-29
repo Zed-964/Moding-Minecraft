@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "obscurestars:item/wip_item"
+    "layer0": "obscurestars:item/oxygen_bucket"
   }
 }
