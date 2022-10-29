@@ -65,6 +65,18 @@
     "obscurestars:starsium_block",
     "obscurestars:raw_starsium_block",
 
+    "obscurestars:zinc_ore",
+    "obscurestars:deepslate_zinc_ore",
+    "obscurestars:asteroid_zinc_ore",
+    "obscurestars:zinc_block",
+    "obscurestars:raw_zinc_block",
+
+    "obscurestars:nickel_ore",
+    "obscurestars:deepslate_nickel_ore",
+    "obscurestars:asteroid_nickel_ore",
+    "obscurestars:nickel_block",
+    "obscurestars:raw_nickel_block",
+
     "obscurestars:steel_block",
 
     "obscurestars:aluminum_alloy_block",

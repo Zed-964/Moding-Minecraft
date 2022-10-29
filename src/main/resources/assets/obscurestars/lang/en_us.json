@@ -62,6 +62,8 @@
   "block.obscurestars.asteroid_iridium_ore": "Asteroid Iridium Ore",
   "block.obscurestars.asteroid_starsium_ore": "Asteroid Starsium Ore",
   "block.obscurestars.asteroid_obscurium_ore": "Asteroid Obscurium Ore",
+  "block.obscurestars.asteroid_zinc_ore": "Asteroid Zinc Ore",
+  "block.obscurestars.asteroid_nickel_ore": "Asteroid Nickel Ore",
 
   "block.obscurestars.uranium_ore": "Uranium Ore",
   "block.obscurestars.platinum_ore": "Platinum Ore",
@@ -70,6 +72,8 @@
   "block.obscurestars.iridium_ore": "Iridium Ore",
   "block.obscurestars.starsium_ore": "Starsium Ore",
   "block.obscurestars.obscurium_ore": "Obscurium Ore",
+  "block.obscurestars.zinc_ore": "Zinc Ore",
+  "block.obscurestars.nickel_ore": "Nickel Ore",
 
   "block.obscurestars.deepslate_uranium_ore": "Deepslate Aluminum Ore",
   "block.obscurestars.deepslate_platinum_ore": "Deepslate Platinum Ore",
@@ -78,6 +82,8 @@
   "block.obscurestars.deepslate_iridium_ore": "Deepslate Iridium Ore",
   "block.obscurestars.deepslate_starsium_ore": "Deepslate Starsium Ore",
   "block.obscurestars.deepslate_obscurium_ore": "Deepslate Obscurium Ore",
+  "block.obscurestars.deepslate_zinc_ore": "Deepslate Zinc Ore",
+  "block.obscurestars.deepslate_nickel_ore": "Deepslate Nickel Ore",
 
   "block.obscurestars.aluminum_block": "Block Of Aluminum",
   "block.obscurestars.platinum_block": "Block Of Platinum",
@@ -87,6 +93,8 @@
   "block.obscurestars.starsium_block": "Block Of Starsium",
   "block.obscurestars.obscurium_block": "Block Of Obscurium",
   "block.obscurestars.steel_block": "Block Of Steel",
+  "block.obscurestars.zinc_block": "Block Of Zinc",
+  "block.obscurestars.nickel_block": "Block Of Nickel",
 
   "block.obscurestars.raw_aluminum_block": "Block Of Raw Aluminum",
   "block.obscurestars.raw_platinum_block": "Block Of Raw Platinum",
@@ -95,6 +103,8 @@
   "block.obscurestars.raw_iridium_block": "Block Of Raw Iridium",
   "block.obscurestars.raw_starsium_block": "Block Of Raw Starsium",
   "block.obscurestars.raw_obscurium_block": "Block Of Raw Obscurium",
+  "block.obscurestars.raw_zinc_block": "Block Of Raw Zinc",
+  "block.obscurestars.raw_nickel_block": "Block Of Raw Nickel",
 
   "block.obscurestars.asteroid_slab": "Asteroid Slab",
   "block.obscurestars.aluminum_alloy_slab": "Aluminum Alloy Slab",
