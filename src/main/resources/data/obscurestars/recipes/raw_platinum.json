@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "raw_platinum",
+  "ingredients": [
+    {
+      "item": "obscurestars:raw_platinum_block"
+    }
+  ],
+  "result": {
+    "item": "obscurestars:raw_platinum",
+    "count": 9
+  }
+}
