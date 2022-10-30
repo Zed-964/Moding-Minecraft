@@ -4,6 +4,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -41,7 +42,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ASTEROID_IRON_ORE = registerBlock("asteroid_iron_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> ASTEROID_COPPER_ORE = registerBlock("asteroid_copper_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> ASTEROID_GOLD_ORE = registerBlock("asteroid_gold_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
-    public static final RegistryObject<Block> ASTEROID_REDSTONE_ORE = registerBlock("asteroid_redstone_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
+    public static final RegistryObject<Block> ASTEROID_REDSTONE_ORE = registerBlock("asteroid_redstone_ore", () -> new RedStoneOreBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> ASTEROID_EMERALD_ORE = registerBlock("asteroid_emerald_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> ASTEROID_LAPIS_LAZULI_ORE = registerBlock("asteroid_lapis_lazuli_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
     public static final RegistryObject<Block> ASTEROID_DIAMOND_ORE = registerBlock("asteroid_diamond_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB);
