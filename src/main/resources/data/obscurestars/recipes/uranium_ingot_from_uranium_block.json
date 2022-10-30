@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "uranium_ingot",
+  "ingredients": [
+    {
+      "item": "obscurestars:uranium_block"
+    }
+  ],
+  "result": {
+    "item": "obscurestars:uranium_ingot",
+    "count": 9
+  }
+}

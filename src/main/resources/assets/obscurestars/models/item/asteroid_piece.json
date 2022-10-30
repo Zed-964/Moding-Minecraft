@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "obscurestars:item/arsteroide_piece"
+    "layer0": "obscurestars:item/arsteroid_piece"
   }
 }
