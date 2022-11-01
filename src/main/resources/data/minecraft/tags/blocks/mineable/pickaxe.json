@@ -101,6 +101,9 @@
     "obscurestars:obscure_alloy_horizontal_stairs",
     "obscurestars:obscure_alloy_semi_block",
     "obscurestars:obscure_alloy_stairs_outer",
-    "obscurestars:obscure_alloy_stairs_inner"
+    "obscurestars:obscure_alloy_stairs_inner",
+
+    "obscurestars:quartz_ore",
+    "obscurestars:deepslate_quartz_ore"
   ]
 }
