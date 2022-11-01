@@ -74,6 +74,7 @@
   "block.obscurestars.obscurium_ore": "Obscurium Ore",
   "block.obscurestars.zinc_ore": "Zinc Ore",
   "block.obscurestars.nickel_ore": "Nickel Ore",
+  "block.obscurestars.quartz_ore": "Quartz Ore",
 
   "block.obscurestars.deepslate_uranium_ore": "Deepslate Aluminum Ore",
   "block.obscurestars.deepslate_platinum_ore": "Deepslate Platinum Ore",
@@ -84,6 +85,7 @@
   "block.obscurestars.deepslate_obscurium_ore": "Deepslate Obscurium Ore",
   "block.obscurestars.deepslate_zinc_ore": "Deepslate Zinc Ore",
   "block.obscurestars.deepslate_nickel_ore": "Deepslate Nickel Ore",
+  "block.obscurestars.deepslate_quartz_ore": "Deepslate Quartz Ore",
 
   "block.obscurestars.aluminum_block": "Block Of Aluminum",
   "block.obscurestars.platinum_block": "Block Of Platinum",
