@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zed964.obscurestars.ObscureStars;
 import net.zed964.obscurestars.fluid.ModFluids;
+import net.zed964.obscurestars.item.custom.DevToolItem;
 
 public class ModItems {
     //List of items creating in this mod
@@ -58,6 +59,10 @@ public class ModItems {
     public static final RegistryObject<Item> KEROSENE_BUCKET = ITEMS.register("kerosene_bucket", () -> new BucketItem(ModFluids.KEROSENE_FLUID, new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB).stacksTo(1)));
     public static final RegistryObject<Item> NITRIC_ACID_BUCKET = ITEMS.register("nitric_acid_bucket", () -> new BucketItem(ModFluids.NITRIC_ACID_FLUID, new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB).stacksTo(1)));
     public static final RegistryObject<Item> NITROGEN_PEROXIDE_BUCKET = ITEMS.register("nitrogen_peroxide_bucket", () -> new BucketItem(ModFluids.NITROGEN_PEROXIDE_FLUID, new Item.Properties().tab(ModCreativeTab.OBSCURESTARS_TAB).stacksTo(1)));
+
+    //Dev Tool
+    public static final RegistryObject<Item> DEV_TOOL = ITEMS.register("dev_tool", () -> new DevToolItem(new Item.Properties().stacksTo(1).tab(ModCreativeTab.OBSCURESTARS_TAB)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
