@@ -3,8 +3,14 @@ package net.zed964.obscurestars.schematic;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.zed964.obscurestars.util.FilesManager;
+
+import java.io.OutputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class SchematicSaver {
     String name = "Unnamed";
@@ -30,6 +36,14 @@ public class SchematicSaver {
         BlockPos bounds = new BlockPos(boundingBox.getXSpan(), boundingBox.getYSpan(), boundingBox.getZSpan());
         Level level = Minecraft.getInstance().level;
 
+        structure.fillFromWorld(level, origin, bounds, false, Blocks.AIR);
 
+        String folderPath = "schematics";
+        String fileName = name + ".nbt";
+        String filePath = folderPath + "/" + fileName;
+        FilesManager.createFolder(folderPath);
+        Path path = Paths.get(filePath);
+
+        OutputStream outputStream = null;
     }
 }

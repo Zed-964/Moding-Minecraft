@@ -1,6 +1,7 @@
 package net.zed964.obscurestars.item.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -48,6 +49,24 @@ public class DevToolItem extends Item {
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level pLevel, @NotNull Player pPlayer, @NotNull InteractionHand pUsedHand) {
+        ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
+        if(itemStack.hasTag()) {
+            assert itemStack.getTag() != null;
+            if((itemStack.getTag().contains("obscurestars.position1")) && (itemStack.getTag().contains("obscurestars.position2"))) {
+                Direction direction = pPlayer.getDirection();
+                if(pPlayer.isShiftKeyDown()) {
+                    BlockPos[] tabPos = this.getNbtForPos(itemStack);
+                    BlockPos position1 = tabPos[0];
+                    BlockPos position2 = tabPos[1];
+                    if(itemStack.hasCustomHoverName()) {
+                        Component name = itemStack.getDisplayName();
+                        SchematicSaver schematicSaver = new SchematicSaver(position1, position2, name.getString());
+                    } else {
+                        SchematicSaver schematicSaver = new SchematicSaver(position1, position2);
+                    }
+                }
+            }
+        }
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 
@@ -89,8 +108,9 @@ public class DevToolItem extends Item {
         itemStack.setTag(nbtData);
     }
 
-    public void getNbtForPos(ItemStack itemStack) {
-        if(itemStack.hasTag()) {
+    private BlockPos[] getNbtForPos(ItemStack itemStack) {
+            BlockPos[] tabPos = new BlockPos[2];
+
             String pos1;
             String pos2;
 
@@ -153,11 +173,14 @@ public class DevToolItem extends Item {
             positionZ1 = Integer.parseInt(zPos1);
             positionZ2 = Integer.parseInt(zPos2);
 
-            BlockPos blockPos1 = new BlockPos(positionX1, positionY1, positionZ1);
-            BlockPos blockPos2 = new BlockPos(positionX2, positionY2, positionZ2);
+            tabPos[0] = new BlockPos(positionX1, positionY1, positionZ1);
+            tabPos[1] = new BlockPos(positionX2, positionY2, positionZ2);
 
-            SchematicSaver schematicSaver = new SchematicSaver(blockPos1, blockPos2);
-        }
+            return tabPos;
+    }
+
+    private Component getNbtForName(ItemStack itemStack) {
+        return itemStack.getDisplayName();
     }
 }
 
