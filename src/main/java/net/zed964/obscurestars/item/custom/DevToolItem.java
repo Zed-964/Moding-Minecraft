@@ -1,7 +1,6 @@
 package net.zed964.obscurestars.item.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -20,6 +19,7 @@ import net.zed964.obscurestars.util.InventoryUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.nio.file.Files;
 import java.util.List;
 
 public class DevToolItem extends Item {
@@ -53,7 +53,6 @@ public class DevToolItem extends Item {
         if(itemStack.hasTag()) {
             assert itemStack.getTag() != null;
             if((itemStack.getTag().contains("obscurestars.position1")) && (itemStack.getTag().contains("obscurestars.position2"))) {
-                Direction direction = pPlayer.getDirection();
                 if(pPlayer.isShiftKeyDown()) {
                     BlockPos[] tabPos = this.getNbtForPos(itemStack);
                     BlockPos position1 = tabPos[0];
@@ -61,8 +60,18 @@ public class DevToolItem extends Item {
                     if(itemStack.hasCustomHoverName()) {
                         Component name = itemStack.getDisplayName();
                         SchematicSaver schematicSaver = new SchematicSaver(position1, position2, name.getString());
+                        if(Files.exists(schematicSaver.getPath())) {
+                            pPlayer.sendMessage(new TextComponent("The Files was Saved with success !"), pPlayer.getUUID());
+                        } else {
+                            pPlayer.sendMessage(new TextComponent("The Files was UnSaved !"), pPlayer.getUUID());
+                        }
                     } else {
                         SchematicSaver schematicSaver = new SchematicSaver(position1, position2);
+                        if(Files.exists(schematicSaver.getPath())) {
+                            pPlayer.sendMessage(new TextComponent("The Files was Saved with success !"), pPlayer.getUUID());
+                        } else {
+                            pPlayer.sendMessage(new TextComponent("The Files was UnSaved !"), pPlayer.getUUID());
+                        }
                     }
                 }
             }
@@ -109,78 +118,75 @@ public class DevToolItem extends Item {
     }
 
     private BlockPos[] getNbtForPos(ItemStack itemStack) {
-            BlockPos[] tabPos = new BlockPos[2];
 
-            String pos1;
-            String pos2;
+        BlockPos[] tabPos = new BlockPos[2];
 
-            String xPos1;
-            String yPos1;
-            String zPos1;
+        String pos1;
+        String pos2;
 
-            String xPos2;
-            String yPos2;
-            String zPos2;
+        String xPos1;
+        String yPos1;
+        String zPos1;
 
-            int positionX1;
-            int positionY1;
-            int positionZ1;
+        String xPos2;
+        String yPos2;
+        String zPos2;
 
-            int positionX2;
-            int positionY2;
-            int positionZ2;
+        int pos1Space;
+        int pos2Space;
 
-            int pos1Space;
-            int pos2Space;
+        assert itemStack.getTag() != null;
+        pos1 = itemStack.getTag().getString("obscurestars.position1");
+        pos2 =  itemStack.getTag().getString("obscurestars.position2");
 
-            assert itemStack.getTag() != null;
-            pos1 = itemStack.getTag().getString("obscurestars.position1");
-            pos2 =  itemStack.getTag().getString("obscurestars.position2");
+        pos1 = pos1.substring(13);
+        pos1 = pos1.replaceAll(" y = ", " ");
+        pos1 = pos1.replaceAll(" z = ", " ");
 
-            pos1 = pos1.replaceAll("Set to : x = ", "");
-            pos1 = pos1.replaceAll(" y = ", " ");
-            pos1 = pos1.replaceAll(" z = ", " ");
+        pos2 = pos2.substring(13);
+        pos2 = pos2.replaceAll(" y = ", " ");
+        pos2 = pos2.replaceAll(" z = ", " ");
 
-            pos2 = pos2.replaceAll("Set to : x = ", "");
-            pos2 = pos2.replaceAll(" y = ", " ");
-            pos2 = pos2.replaceAll(" z = ", " ");
+        pos1Space = pos1.indexOf(" ");
+        xPos1 = pos1.substring(0, pos1Space);
+        pos1 = pos1.replaceAll(xPos1 + " ", "");
 
-            pos1Space = pos1.indexOf(" ");
-            xPos1 = pos1.substring(0, pos1Space);
-            pos1 = pos1.replaceAll(xPos1 + " ", "");
+        pos2Space = pos2.indexOf(" ");
+        xPos2 = pos2.substring(0, pos2Space);
+        pos2 = pos2.replaceAll(xPos2 + " ", "");
 
-            pos2Space = pos2.indexOf(" ");
-            xPos2 = pos2.substring(0, pos2Space);
-            pos2 = pos2.replaceAll(xPos2 + " ", "");
+        pos1Space = pos1.indexOf(" ");
+        yPos1 = pos1.substring(0, pos1Space);
+        pos1 = pos1.replaceAll(yPos1 + " ", "");
 
-            pos1Space = pos1.indexOf(" ");
-            yPos1 = pos1.substring(0, pos1Space);
-            pos1 = pos1.replaceAll(yPos1 + " ", "");
+        pos2Space = pos2.indexOf(" ");
+        yPos2 = pos2.substring(0, pos2Space);
+        pos2 = pos2.replaceAll(yPos2 + " ", "");
 
-            pos2Space = pos2.indexOf(" ");
-            yPos2 = pos2.substring(0, pos2Space);
-            pos2 = pos2.replaceAll(yPos2 + " ", "");
+        zPos1 = pos1;
+        zPos2 = pos2;
 
-            zPos1 = pos1;
-            zPos2 = pos2;
+        tabPos[0] = new BlockPos(convertStringToInt(xPos1, verifNbrNegatif(xPos1)), convertStringToInt(yPos1, verifNbrNegatif(yPos1)), convertStringToInt(zPos1, verifNbrNegatif(zPos1)));
+        tabPos[1] = new BlockPos(convertStringToInt(xPos2, verifNbrNegatif(xPos2)), convertStringToInt(yPos2, verifNbrNegatif(yPos2)), convertStringToInt(zPos2, verifNbrNegatif(zPos2)));
 
-            positionX1 = Integer.parseInt(xPos1);
-            positionX2 = Integer.parseInt(xPos2);
-
-            positionY1 = Integer.parseInt(yPos1);
-            positionY2 = Integer.parseInt(yPos2);
-
-            positionZ1 = Integer.parseInt(zPos1);
-            positionZ2 = Integer.parseInt(zPos2);
-
-            tabPos[0] = new BlockPos(positionX1, positionY1, positionZ1);
-            tabPos[1] = new BlockPos(positionX2, positionY2, positionZ2);
-
-            return tabPos;
+        return tabPos;
     }
 
-    private Component getNbtForName(ItemStack itemStack) {
-        return itemStack.getDisplayName();
+    private boolean verifNbrNegatif(String pos) {
+        String verif = "-";
+        return pos.startsWith(verif);
     }
+
+    private int convertStringToInt(String pos, Boolean bool) {
+        if(bool) {
+            int nbr = -1;
+            String test;
+            test = pos.replaceAll("-", "");
+            return Integer.parseInt(test) * nbr;
+        } else {
+            return Integer.parseInt(pos);
+        }
+    }
+
 }
 
