@@ -17,8 +17,8 @@ import java.nio.file.*;
 
 public class SchematicSaver {
     String name = "Unnamed";
-    BlockPos pos1 = null;
-    BlockPos pos2 = null;
+    BlockPos pos1;
+    BlockPos pos2;
     Path path = null;
 
     public SchematicSaver(BlockPos pos1, BlockPos pos2) {

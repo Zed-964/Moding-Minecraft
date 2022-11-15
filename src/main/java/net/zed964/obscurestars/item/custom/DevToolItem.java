@@ -35,10 +35,12 @@ public class DevToolItem extends Item {
             BlockPos blockClicked = pContext.getClickedPos();
             assert player != null;
             ItemStack devTool = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DEV_TOOL.get()));
-            if (player.isShiftKeyDown()) {
-                addNbtForPos(blockClicked, devTool, false);
-                outputSetPos(blockClicked, player, "Position 2");
-
+            if (devTool.hasTag()) {
+                assert devTool.getTag() != null;
+                if (devTool.getTag().contains("obscurestars.position1")) {
+                    addNbtForPos(blockClicked, devTool, false);
+                    outputSetPos(blockClicked, player, "Position 2");
+                }
             } else {
                 addNbtForPos(blockClicked, devTool, true);
                 outputSetPos(blockClicked, player, "Position 1");
@@ -58,8 +60,12 @@ public class DevToolItem extends Item {
                     BlockPos position1 = tabPos[0];
                     BlockPos position2 = tabPos[1];
                     if(itemStack.hasCustomHoverName()) {
-                        Component name = itemStack.getDisplayName();
-                        SchematicSaver schematicSaver = new SchematicSaver(position1, position2, name.getString());
+                        Component component = itemStack.getDisplayName();
+                        String name  = component.getString();
+                        name = name.replace("[", "");
+                        name = name.replace("]", "");
+
+                        SchematicSaver schematicSaver = new SchematicSaver(position1, position2, name);
                         if(Files.exists(schematicSaver.getPath())) {
                             pPlayer.sendMessage(new TextComponent("The Files was Saved with success !"), pPlayer.getUUID());
                         } else {
