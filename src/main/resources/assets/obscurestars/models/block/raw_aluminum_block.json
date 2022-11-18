@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "obscurestars:block/wip_block"
+    "all": "obscurestars:block/raw_aluminium_block"
   }
 }
