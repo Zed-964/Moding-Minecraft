@@ -18,12 +18,13 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.zed964.obscurestars.block.custom.ModBlockStateProperties;
+import net.zed964.obscurestars.block.properties.ModBlockStateProperties;
+import net.zed964.obscurestars.block.properties.SpecifyDirectionTypeTo;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class SemiBlock extends Block implements SimpleWaterloggedBlock {
-    public static final EnumProperty<SpecifyDirectionType> SPECIFY_FACING = ModBlockStateProperties.SPECIFY_DIRECTION_TYPE;
+    public static final EnumProperty<SpecifyDirectionTypeTo> SPECIFY_FACING = ModBlockStateProperties.SPECIFY_DIRECTION_TYPE_TO;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected static final VoxelShape HALF_SLAB_NORTH_AABB = Block.box(0, 0, 0, 16, 8, 8);
@@ -56,7 +57,7 @@ public class SemiBlock extends Block implements SimpleWaterloggedBlock {
 
     public SemiBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.defaultBlockState().setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.defaultBlockState().setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.DOWN_NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
@@ -69,7 +70,7 @@ public class SemiBlock extends Block implements SimpleWaterloggedBlock {
         pBuilder.add(SPECIFY_FACING, WATERLOGGED);
     }
 
-    private static VoxelShape makaShape(VoxelShape shape1, VoxelShape shape2, VoxelShape shape3) {
+    private static VoxelShape makeShape(VoxelShape shape1, VoxelShape shape2, VoxelShape shape3) {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, shape1, BooleanOp.OR);
         shape = Shapes.join(shape, shape2, BooleanOp.OR);
@@ -80,16 +81,16 @@ public class SemiBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
-        SpecifyDirectionType specifyDirectionType = pState.getValue(SPECIFY_FACING);
-        return switch (specifyDirectionType) {
-            case DOWN_EAST -> makaShape(HALF_SLAB_EAST_AABB, CORNER_EAST_AABB, CORNER_TOP_EAST_AABB);
-            case DOWN_WEST -> makaShape(HALF_SLAB_WEST_AABB, CORNER_WEST_AABB, CORNER_TOP_WEST_AABB);
-            case DOWN_SOUTH -> makaShape(HALF_SLAB_SOUTH_AABB, CORNER_SOUTH_AABB, CORNER_TOP_SOUTH_AABB);
-            case UP_EAST -> makaShape(UP_HALF_SLAB_EAST_AABB, UP_CORNER_EAST_AABB, CORNER_DOWN_EAST_AABB);
-            case UP_WEST -> makaShape(UP_HALF_SLAB_WEST_AABB, UP_CORNER_WEST_AABB, CORNER_DOWN_WEST_AABB);
-            case UP_SOUTH -> makaShape(UP_HALF_SLAB_SOUTH_AABB, UP_CORNER_SOUTH_AABB, CORNER_DOWN_SOUTH_AABB);
-            case UP_NORTH -> makaShape(UP_HALF_SLAB_NORTH_AABB, UP_CORNER_NORTH_AABB, CORNER_DOWN_NORTH_AABB);
-            default -> makaShape(HALF_SLAB_NORTH_AABB, CORNER_NORTH_AABB, CORNER_TOP_NORTH_AABB);
+        SpecifyDirectionTypeTo specifyDirectionTypeTo = pState.getValue(SPECIFY_FACING);
+        return switch (specifyDirectionTypeTo) {
+            case DOWN_EAST -> makeShape(HALF_SLAB_EAST_AABB, CORNER_EAST_AABB, CORNER_TOP_EAST_AABB);
+            case DOWN_WEST -> makeShape(HALF_SLAB_WEST_AABB, CORNER_WEST_AABB, CORNER_TOP_WEST_AABB);
+            case DOWN_SOUTH -> makeShape(HALF_SLAB_SOUTH_AABB, CORNER_SOUTH_AABB, CORNER_TOP_SOUTH_AABB);
+            case UP_EAST -> makeShape(UP_HALF_SLAB_EAST_AABB, UP_CORNER_EAST_AABB, CORNER_DOWN_EAST_AABB);
+            case UP_WEST -> makeShape(UP_HALF_SLAB_WEST_AABB, UP_CORNER_WEST_AABB, CORNER_DOWN_WEST_AABB);
+            case UP_SOUTH -> makeShape(UP_HALF_SLAB_SOUTH_AABB, UP_CORNER_SOUTH_AABB, CORNER_DOWN_SOUTH_AABB);
+            case UP_NORTH -> makeShape(UP_HALF_SLAB_NORTH_AABB, UP_CORNER_NORTH_AABB, CORNER_DOWN_NORTH_AABB);
+            default -> makeShape(HALF_SLAB_NORTH_AABB, CORNER_NORTH_AABB, CORNER_TOP_NORTH_AABB);
         };
     }
 
@@ -104,26 +105,26 @@ public class SemiBlock extends Block implements SimpleWaterloggedBlock {
 
         if (direction == Direction.DOWN) {
             return switch (directionPlacement) {
-                case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_EAST);
-                case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_WEST);
-                case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_SOUTH);
-                default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_NORTH);
+                case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_EAST);
+                case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_WEST);
+                case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_SOUTH);
+                default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_NORTH);
             };
         } else {
             double placementCursor = pContext.getClickLocation().y - blockPos.getY();
             if (placementCursor < 0.5) {
                 return switch (directionPlacement) {
-                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_EAST);
-                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_WEST);
-                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_SOUTH);
-                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.DOWN_NORTH);
+                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.DOWN_EAST);
+                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.DOWN_WEST);
+                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.DOWN_SOUTH);
+                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.DOWN_NORTH);
                 };
             } else {
                 return switch (directionPlacement) {
-                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_EAST);
-                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_WEST);
-                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_SOUTH);
-                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionType.UP_NORTH);
+                    case EAST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_EAST);
+                    case WEST -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_WEST);
+                    case SOUTH -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_SOUTH);
+                    default -> blockState.setValue(SPECIFY_FACING, SpecifyDirectionTypeTo.UP_NORTH);
                 };
             }
         }

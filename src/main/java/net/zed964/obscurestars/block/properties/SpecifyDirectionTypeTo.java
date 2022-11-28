@@ -1,9 +1,9 @@
-package net.zed964.obscurestars.block.building;
+package net.zed964.obscurestars.block.properties;
 
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
 
-public enum SpecifyDirectionType implements StringRepresentable {
+public enum SpecifyDirectionTypeTo implements StringRepresentable {
     DOWN_NORTH("down_north"),
     DOWN_EAST("down_east"),
     DOWN_WEST("down_west"),
@@ -15,7 +15,7 @@ public enum SpecifyDirectionType implements StringRepresentable {
 
     private final String name;
 
-    private SpecifyDirectionType(String pName) {
+    SpecifyDirectionTypeTo(String pName) {
         this.name = pName;
     }
 
