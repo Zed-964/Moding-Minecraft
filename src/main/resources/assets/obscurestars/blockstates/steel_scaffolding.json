@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "obscurestars:block/asteroid_slab"
+    },
+    "type=double": {
+      "model": "obscurestars:block/asteroid_block"
+    },
+    "type=top": {
+      "model": "obscurestars:block/asteroid_slab_top"
+    }
+  }
+}
