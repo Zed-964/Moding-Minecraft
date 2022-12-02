@@ -3,10 +3,7 @@ package net.zed964.obscurestars.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RedStoneOreBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -134,7 +131,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS_OUTER = registerBlock("obscure_alloy_stairs_outer", () -> new StairsOuterBlock(BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
     public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS_INNER = registerBlock("obscure_alloy_stairs_inner", () -> new StairsInnerBlock(BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
 
-    public static final RegistryObject<Block> STEEL_SCAFFOLDING = registerBlock("steel_scaffolding", () -> new SteelScaffoldingBlock(BlockBehaviour.Properties.of(Material.METAL).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> STEEL_SCAFFOLDING = registerBlock("steel_scaffolding", () -> new SteelScaffoldingBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

@@ -1,13 +1,94 @@
 {
-  "variants": {
-    "type=bottom": {
-      "model": "obscurestars:block/asteroid_slab"
+  "multipart": [
+    {
+      "when": {
+        "base": "true",
+        "base_facing": "up"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_base_vertical",
+        "x": 180
+      }
     },
-    "type=double": {
-      "model": "obscurestars:block/asteroid_block"
+    {
+      "when": {
+        "base": "true",
+        "base_facing": "down"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_base_vertical"
+      }
     },
-    "type=top": {
-      "model": "obscurestars:block/asteroid_slab_top"
+    {
+      "when": {
+        "base": "true",
+        "base_facing": "north"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_base_horizontal"
+      }
+    },
+    {
+      "when": {
+        "base": "true",
+        "base_facing": "south"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_base_horizontal",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "base": "true",
+        "base_facing": "east"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_base_horizontal",
+        "y": 90
+
+      }
+    },
+    {
+      "when": {
+        "base": "true",
+        "base_facing": "west"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_base_horizontal",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "base": "false",
+        "connection": "false",
+        "axis" : "x"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_horizontal",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "base": "false",
+        "connection": "false",
+        "axis" : "y"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding"
+      }
+    },
+    {
+      "when": {
+        "base": "false",
+        "connection": "false",
+        "axis" : "z"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_horizontal"
+      }
     }
-  }
+  ]
 }

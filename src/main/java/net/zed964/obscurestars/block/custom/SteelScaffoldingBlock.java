@@ -21,7 +21,8 @@ import net.zed964.obscurestars.block.properties.ConnectionFacingTo;
 import net.zed964.obscurestars.block.properties.ModBlockStateProperties;
 import org.jetbrains.annotations.NotNull;
 
-public class SteelScaffoldingBlock extends RotatedPillarBlock implements SimpleWaterloggedBlock {
+public class SteelScaffoldingBlock extends GlassBlock implements SimpleWaterloggedBlock {
+    public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
     public static final BooleanProperty BASE = ModBlockStateProperties.BASE;
     public static final EnumProperty<BaseFacingTo> BASE_FACING = ModBlockStateProperties.BASE_FACING_TO;
     public static final BooleanProperty CONNECTION = ModBlockStateProperties.CONNECTION;
@@ -107,124 +108,142 @@ public class SteelScaffoldingBlock extends RotatedPillarBlock implements SimpleW
             if (!pState.getValue(CONNECTION)) {
                 if (!pState.getValue(BASE)) {
                     switch (pState.getValue(CONNECTION_FACING)) {
-                            case NONE -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN -> pState;
-                                    case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
-                                    case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
-                                    case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
-                                    case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
-                                };
-                            }
-                            case NORTH -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, SOUTH -> pState;
-                                    case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_SOUTH);
-                                    case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_WEST);
-                                    case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST);
-                                };
-                            }
-                            case SOUTH -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH -> pState;
-                                    case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_SOUTH);
-                                    case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST);
-                                    case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_EAST);
-                                };
-                            }
-                            case EAST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, WEST -> pState;
-                                    case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_EAST);
-                                    case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST);
-                                    case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_WEST);
-                                };
-                            }
-                            case WEST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, EAST -> pState;
-                                    case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST);
-                                    case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_WEST);
-                                    case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_WEST);
-                                };
-                            }
-                            case NORTH_EAST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, SOUTH, WEST -> pState;
-                                    case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
-                                    case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
-                                };
-                            }
-                            case NORTH_WEST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, SOUTH, EAST -> pState;
-                                    case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
-                                    case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
-                                };
-                            }
-                            case SOUTH_EAST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH, WEST -> pState;
-                                    case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
-                                    case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
-                                };
-                            }
-                            case SOUTH_WEST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH, EAST -> pState;
-                                    case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
-                                    case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
-                                };
-                            }
-                            case NORTH_SOUTH -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH, SOUTH -> pState;
-                                    case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
-                                    case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
-                                };
-                            }
-                            case EAST_WEST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, EAST, WEST -> pState;
-                                    case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
-                                    case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
-                                };
-                            }
-                            case NORTH_EAST_SOUTH -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH, SOUTH, WEST -> pState;
-                                    case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
-                                };
-                            }
-                            case EAST_SOUTH_WEST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH, EAST, WEST -> pState;
-                                    case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
-                                };
-                            }
-                            case SOUTH_WEST_NORTH -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, NORTH, SOUTH, EAST -> pState;
-                                    case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
-                                };
-                            }
-                            case WEST_NORTH_EAST -> {
-                                return switch (pDirection) {
-                                    case UP, DOWN, SOUTH, EAST, WEST -> pState;
-                                    case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
-                                };
-                            }
-                        }
-                } else {
-                    switch (pState.getValue(CONNECTION_FACING)) {
                         case NONE -> {
                             return switch (pDirection) {
                                 case UP, DOWN -> pState;
-                                case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
-                                case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
-                                case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
-                                case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
+                                case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
+                                case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
+                                case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
+                                case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
                             };
+                        }
+                        case NORTH -> {
+                            return switch (pDirection) {
+                                case UP, DOWN -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE);
+                                case SOUTH -> pState;
+                                case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_SOUTH);
+                                case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_WEST);
+                                case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST);
+                            };
+                        }
+                        case SOUTH -> {
+                            return switch (pDirection) {
+                                case UP, DOWN -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE);
+                                case NORTH -> pState;
+                                case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_SOUTH);
+                                case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST);
+                                case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_EAST);
+                            };
+                        }
+                        case EAST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE);
+                                case WEST -> pState;
+                                case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_EAST);
+                                case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST);
+                                case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_WEST);
+                            };
+                        }
+                        case WEST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE);
+                                case EAST -> pState;
+                                case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST);
+                                case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_WEST);
+                                case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_WEST);
+                            };
+                        }
+                        case NORTH_EAST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, SOUTH, WEST -> pState;
+                                case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
+                                case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
+                            };
+                        }
+                        case NORTH_WEST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, SOUTH, EAST -> pState;
+                                case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
+                                case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
+                            };
+                        }
+                        case SOUTH_EAST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, NORTH, WEST -> pState;
+                                case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
+                                case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
+                            };
+                        }
+                        case SOUTH_WEST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, NORTH, EAST -> pState;
+                                case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
+                                case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
+                            };
+                        }
+                        case NORTH_SOUTH -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, NORTH, SOUTH -> pState;
+                                case EAST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
+                                case WEST -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
+                            };
+                        }
+                        case EAST_WEST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, EAST, WEST -> pState;
+                                case NORTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
+                                case SOUTH -> pState.setValue(AXIS, Direction.Axis.Y).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
+                            };
+                        }
+                        case NORTH_EAST_SOUTH -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, NORTH, SOUTH, WEST -> pState;
+                                case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
+                            };
+                        }
+                        case EAST_SOUTH_WEST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, NORTH, EAST, WEST -> pState;
+                                case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
+                            };
+                        }
+                        case SOUTH_WEST_NORTH -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, NORTH, SOUTH, EAST -> pState;
+                                case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
+                            };
+                        }
+                        case WEST_NORTH_EAST -> {
+                            return switch (pDirection) {
+                                case UP, DOWN, SOUTH, EAST, WEST -> pState;
+                                case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
+                            };
+                        }
+                    }
+                } else {
+                    switch (pState.getValue(CONNECTION_FACING)) {
+                        case NONE -> {
+                             switch (pDirection) {
+                                case UP, DOWN -> {
+                                    if (pNeighborState.getValue(CONNECTION) ==  Boolean.TRUE) {
+                                        return pState.setValue(BASE, Boolean.FALSE);
+                                    } else {
+                                        return pState;
+                                    }
+                                }
+                                 case NORTH -> {
+                                     return pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
+                                 }
+                                 case SOUTH -> {
+                                     return pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
+                                 }
+                                 case EAST -> {
+                                     return pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
+                                 }
+                                 case WEST -> {
+                                     return pState.setValue(AXIS, Direction.Axis.Y).setValue(BASE, Boolean.FALSE).setValue(CONNECTION, Boolean.TRUE).setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
+                                 }
+                             }
                         }
                         case NORTH -> {
                             return switch (pDirection) {
@@ -442,6 +461,123 @@ public class SteelScaffoldingBlock extends RotatedPillarBlock implements SimpleW
                         return switch (pDirection) {
                             case UP, DOWN, SOUTH, EAST, WEST -> pState;
                             case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.FULL);
+                        };
+                    }
+                }
+            }
+        } else if (pNeighborState.getBlock() ==  Blocks.AIR) {
+            if (pState.getValue(CONNECTION)) {
+                switch (pState.getValue(CONNECTION_FACING)) {
+                    case NORTH -> {
+                        return switch (pState.getValue(BASE_FACING)) {
+                            case UP, DOWN, SOUTH, EAST, WEST ->  pState;
+                            case NORTH -> pState.setValue(AXIS, Direction.Axis.Z).setValue(BASE, Boolean.TRUE).setValue(CONNECTION, Boolean.FALSE);
+                            case NONE -> pState.setValue(AXIS, Direction.Axis.Z).setValue(CONNECTION, Boolean.FALSE);
+                        };
+                    }
+                    case SOUTH -> {
+                        return switch (pState.getValue(BASE_FACING)) {
+                            case UP, DOWN, NORTH, EAST, WEST ->  pState;
+                            case SOUTH -> pState.setValue(AXIS, Direction.Axis.Z).setValue(BASE, Boolean.TRUE).setValue(CONNECTION, Boolean.FALSE);
+                            case NONE -> pState.setValue(AXIS, Direction.Axis.Z).setValue(CONNECTION, Boolean.FALSE);
+                        };
+                    }
+                    case EAST -> {
+                        return switch (pState.getValue(BASE_FACING)) {
+                            case UP, DOWN, NORTH, SOUTH, WEST ->  pState;
+                            case EAST -> pState.setValue(AXIS, Direction.Axis.X).setValue(BASE, Boolean.TRUE).setValue(CONNECTION, Boolean.FALSE);
+                            case NONE -> pState.setValue(AXIS, Direction.Axis.X).setValue(CONNECTION, Boolean.FALSE);
+                        };
+                    }
+                    case WEST -> {
+                        return switch (pState.getValue(BASE_FACING)) {
+                            case UP, DOWN, NORTH, SOUTH, EAST ->  pState;
+                            case WEST -> pState.setValue(AXIS, Direction.Axis.X).setValue(BASE, Boolean.TRUE).setValue(CONNECTION, Boolean.FALSE);
+                            case NONE -> pState.setValue(AXIS, Direction.Axis.X).setValue(CONNECTION, Boolean.FALSE);
+
+                        };
+                    }
+                    case NORTH_EAST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, NORTH, EAST ->  pState;
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
+                        };
+                    }
+                    case NORTH_WEST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, NORTH, WEST ->  pState;
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
+                        };
+                    }
+                    case SOUTH_EAST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, SOUTH, EAST ->  pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
+                        };
+                    }
+                    case SOUTH_WEST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, SOUTH, WEST ->  pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
+                        };
+                    }
+                    case NORTH_SOUTH -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, EAST, WEST ->  pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH);
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH);
+                        };
+                    }
+                    case EAST_WEST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, NORTH, SOUTH ->  pState;
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.WEST);
+                        };
+                    }
+                    case NORTH_EAST_SOUTH -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, EAST ->  pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST);
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_EAST);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_SOUTH);
+                        };
+                    }
+                    case EAST_SOUTH_WEST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, SOUTH ->  pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_WEST);
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_EAST);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST);
+                        };
+                    }
+                    case SOUTH_WEST_NORTH -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, WEST ->  pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_WEST);
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST);
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_SOUTH);
+                        };
+                    }
+                    case WEST_NORTH_EAST -> {
+                        return switch (pDirection) {
+                            case UP, DOWN, NORTH ->  pState;
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_WEST);
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_WEST);
+                        };
+                    }
+                    case FULL -> {
+                        return switch (pDirection) {
+                            case UP, DOWN -> pState;
+                            case NORTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.WEST_NORTH_EAST);
+                            case SOUTH -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.EAST_SOUTH_WEST);
+                            case EAST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.NORTH_EAST_SOUTH);
+                            case WEST -> pState.setValue(CONNECTION_FACING, ConnectionFacingTo.SOUTH_WEST_NORTH);
                         };
                     }
                 }
