@@ -150,6 +150,9 @@
   "block.obscurestars.aluminum_alloy_stairs_inner": "Aluminum Alloy Stairs Inner",
   "block.obscurestars.obscure_alloy_stairs_inner": "Obscure Alloy Stairs Inner",
 
+  "block.obscurestars.steel_scaffolding": "Steel Scaffolding",
+
+
   "itemGroup.obscurestars_tab": "Obscure Stars",
   "itemGroup.obscurestars_tab_rocket_component": "Rocket Component"
 

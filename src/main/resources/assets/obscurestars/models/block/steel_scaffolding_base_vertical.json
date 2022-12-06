@@ -257,6 +257,6 @@
   ],
   "textures": {
     "0": "obscurestars:block/steel_scaffolding_base_vertical",
-    "particle": "obscurestars:block/steel_scaffolding_base_vertical"
+    "particle": "obscurestars:block/steel_scaffolding_particle"
   }
 }

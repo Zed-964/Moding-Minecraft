@@ -77,6 +77,9 @@
     "obscurestars:nickel_block",
     "obscurestars:raw_nickel_block",
 
+    "obscurestars:quartz_ore",
+    "obscurestars:deepslate_quartz_ore",
+
     "obscurestars:steel_block",
 
     "obscurestars:aluminum_alloy_block",
@@ -103,7 +106,7 @@
     "obscurestars:obscure_alloy_stairs_outer",
     "obscurestars:obscure_alloy_stairs_inner",
 
-    "obscurestars:quartz_ore",
-    "obscurestars:deepslate_quartz_ore"
+    "obscurestars:steel_scaffolding"
+
   ]
 }

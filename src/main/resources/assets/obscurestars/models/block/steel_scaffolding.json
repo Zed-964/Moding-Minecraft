@@ -36,7 +36,7 @@
   "texture_size": [64, 64],
   "textures": {
     "0": "obscurestars:block/steel_scaffolding",
-    "particle": "obscurestars:block/steel_scaffolding"
+    "particle": "obscurestars:block/steel_scaffolding_particle"
   },
   "elements": [
     {

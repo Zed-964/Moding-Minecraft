@@ -131,7 +131,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS_OUTER = registerBlock("obscure_alloy_stairs_outer", () -> new StairsOuterBlock(BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
     public static final RegistryObject<Block> OBSCURE_ALLOY_STAIRS_INNER = registerBlock("obscure_alloy_stairs_inner", () -> new StairsInnerBlock(BlockBehaviour.Properties.of(Material.STONE).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
 
-    public static final RegistryObject<Block> STEEL_SCAFFOLDING = registerBlock("steel_scaffolding", () -> new SteelScaffoldingBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
+    public static final RegistryObject<Block> STEEL_SCAFFOLDING = registerBlock("steel_scaffolding", () -> new SteelScaffoldingBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.NETHERITE_BLOCK).strength(7f).requiresCorrectToolForDrops()), ModCreativeTab.OBSCURESTARS_TAB_ROCKET_COMPONENT);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

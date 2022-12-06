@@ -89,6 +89,151 @@
       "apply": {
         "model": "obscurestars:block/steel_scaffolding_horizontal"
       }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "north"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "south"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection1"
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "east"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "west"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "north_south"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection2-2"
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "east_west"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection2-2",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "north_east"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection2-1",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "north_west"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection2-1",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "south_east"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection2-1",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "south_west"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection2-1"
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "north_east_south"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection3",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "east_south_west"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection3",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "south_west_north"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection3"
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "west_north_east"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection3",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "connection": "true",
+        "connection_facing": "full"
+      },
+      "apply": {
+        "model": "obscurestars:block/steel_scaffolding_connection4"
+      }
     }
   ]
 }

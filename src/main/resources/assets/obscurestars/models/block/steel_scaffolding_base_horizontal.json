@@ -2,7 +2,7 @@
   "credit": "Made with Blockbench",
   "textures": {
     "0": "obscurestars:block/steel_scaffolding_base_horizontal",
-    "particle": "obscurestars:block/steel_scaffolding_base_horizontal"
+    "particle": "obscurestars:block/steel_scaffolding_particle"
   },
   "elements": [
     {
