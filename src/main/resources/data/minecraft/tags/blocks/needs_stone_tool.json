@@ -21,6 +21,9 @@
     "obscurestars:deepslate_aluminum_ore",
     "obscurestars:asteroid_aluminum_ore",
     "obscurestars:aluminum_block",
-    "obscurestars:raw_aluminum_block"
+    "obscurestars:raw_aluminum_block",
+
+    "obscurestars:quartz_ore",
+    "obscurestars:deepslate_quartz_ore"
   ]
 }
