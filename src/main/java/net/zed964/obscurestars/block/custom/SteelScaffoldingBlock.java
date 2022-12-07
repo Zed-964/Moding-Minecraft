@@ -586,6 +586,7 @@ public class SteelScaffoldingBlock extends GlassBlock implements SimpleWaterlogg
         return pState;
     }
 
+
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
         VoxelShape shape;

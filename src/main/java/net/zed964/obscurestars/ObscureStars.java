@@ -40,8 +40,6 @@ public class ObscureStars
     }
 
     private void clientSetup(final FMLCommonSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.STEEL_SCAFFOLDING.get(), RenderType.translucent());
-
         ItemBlockRenderTypes.setRenderLayer(ModFluids.HYDROGEN_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.HYDROGEN_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.HYDROGEN_FLOWING.get(), RenderType.translucent());

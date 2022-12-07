@@ -6,7 +6,7 @@
         "base_facing": "up"
       },
       "apply": {
-        "model": "obscurestars:block/steel_scaffolding_base_vertical",
+        "model": "obscurestars:block/steel_scaffolding_base",
         "x": 180
       }
     },
@@ -16,7 +16,7 @@
         "base_facing": "down"
       },
       "apply": {
-        "model": "obscurestars:block/steel_scaffolding_base_vertical"
+        "model": "obscurestars:block/steel_scaffolding_base"
       }
     },
     {
